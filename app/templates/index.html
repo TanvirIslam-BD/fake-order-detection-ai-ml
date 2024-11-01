@@ -1,0 +1,208 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    .upload-icon {
+    font-size: 30px; /* Adjust size as needed */
+    vertical-align: middle; /* Aligns with text */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+   .file-upload {
+    margin: 20px 0;
+}
+
+.file-upload-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.custom-file-upload {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    border-color: #45a049;
+    background-color: #f1f1f1;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.upload-icon {
+    font-size: 30px;
+}
+
+.upload-text {
+    margin-left: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.file-upload-info {
+    font-size: 12px;
+    color: #888;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.summary table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.summary th, .summary td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.summary th {
+    background-color: #4caf50;
+    color: white;
+}
+
+
+</style>
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Train EventBooking Order Classification Model</h1>
+<form method="post" action="/train-action" enctype="multipart/form-data">
+
+
+     <div class="form-group file-upload">
+        <label for="file" class="file-upload-label">Upload Dataset (CSV)</label>
+        <div class="custom-file-upload" onclick="document.getElementById('file').click();">
+            <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+            <span class="upload-icon"><i class="fas fa-file-csv"></i></span>
+            <span class="upload-text">Choose a file</span>
+        </div>
+        <p class="file-upload-info">Please upload a CSV file only.</p>
+    </div>
+
+    <!-- Summary Section -->
+    <div id="summary" class="summary"></div>
+
+    <!-- Label Column Selection -->
+    <div class="form-group" id="label-column-selection" style="display: none;">
+        <label for="labelColumn">Select Label Column:</label>
+        <select name="labelColumn" id="labelColumn" class="form-control"></select>
+    </div>
+
+    <!-- Model Hyperparameters -->
+    <h3>Model Hyperparameters</h3>
+    <div class="form-group">
+        <label for="learning_rate">Learning Rate</label>
+        <input type="number" step="0.01" class="form-control" id="learning_rate" name="learning_rate" value="0.05">
+    </div>
+    <div class="form-group">
+        <label for="max_iter">Maximum Iterations</label>
+        <input type="number" class="form-control" id="max_iter" name="max_iter" value="200">
+    </div>
+    <div class="form-group">
+        <label for="max_leaf_nodes">Max Leaf Nodes</label>
+        <input type="number" class="form-control" id="max_leaf_nodes" name="max_leaf_nodes" value="40">
+    </div>
+    <div class="form-group">
+        <label for="min_samples_leaf">Minimum Samples per Leaf</label>
+        <input type="number" class="form-control" id="min_samples_leaf" name="min_samples_leaf" value="10">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Train Model</button>
+</form>
+
+<script>
+
+   document.getElementById('file').addEventListener('change', function() {
+    const fileName = this.files[0] ? this.files[0].name : "No file chosen";
+    document.querySelector('.upload-text').textContent = fileName;
+    });
+
+    document.getElementById('file').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const contents = e.target.result;
+                const data = parseCSV(contents);
+                displaySummary(data);
+                populateLabelColumn(data.headers);
+            };
+
+            reader.readAsText(file);
+        }
+    });
+
+    function parseCSV(contents) {
+        const rows = contents.split('\n').map(row => row.split(','));
+        const headers = rows[0];
+        const data = rows.slice(1).map(row => {
+            return headers.reduce((obj, header, index) => {
+                obj[header.trim()] = row[index] ? row[index].trim() : '';
+                return obj;
+            }, {});
+        });
+
+        return { headers, data };
+    }
+
+    function displaySummary(data) {
+        const summaryDiv = document.getElementById('summary');
+        summaryDiv.innerHTML = ''; // Clear previous summary
+
+        // Create summary content
+        const headerHTML = `<h3>Dataset Summary</h3><p>Total Rows: ${data.data.length}</p>`;
+        let tableHTML = '<table><tr>';
+
+        // Create table headers
+        data.headers.forEach(header => {
+            tableHTML += `<th>${header}</th>`;
+        });
+        tableHTML += '</tr>';
+
+        // Create table rows (first few for preview)
+        const previewRows = data.data.slice(0, 5);
+        previewRows.forEach(row => {
+            tableHTML += '<tr>';
+            data.headers.forEach(header => {
+                tableHTML += `<td>${row[header]}</td>`;
+            });
+            tableHTML += '</tr>';
+        });
+        tableHTML += '</table>';
+
+        summaryDiv.innerHTML = headerHTML + tableHTML;
+    }
+
+    function populateLabelColumn(headers) {
+        const labelSelect = document.getElementById('labelColumn');
+        labelSelect.innerHTML = ''; // Clear previous options
+        headers.forEach(header => {
+            const option = document.createElement('option');
+            option.value = header;
+            option.textContent = header;
+            labelSelect.appendChild(option);
+        });
+
+        // Show the label column selection
+        document.getElementById('label-column-selection').style.display = 'block';
+    }
+
+</script>
+
+
+{% endblock %}

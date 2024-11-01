@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluation Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Model Evaluation Results</h1>
+        <div class="mt-4">
+            <h3>Metrics</h3>
+            <ul>
+                <li>Accuracy: <span id="accuracy"></span></li>
+                <li>Precision: <span id="precision"></span></li>
+                <li>Recall: <span id="recall"></span></li>
+                <li>F1 Score: <span id="f1"></span></li>
+            </ul>
+        </div>
+        <div class="mt-4">
+            <h3>Confusion Matrix</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Predicted 0</th>
+                        <th>Predicted 1</th>
+                    </tr>
+                </thead>
+                <tbody id="confusion-matrix"></tbody>
+            </table>
+        </div>
+        <div class="mt-4">
+            <h3>ROC Curve</h3>
+            <canvas id="rocCurve" width="400" height="200"></canvas>
+        </div>
+        <div class="mt-4">
+            <h3>Feature Importance</h3>
+            <canvas id="featureImportance" width="400" height="200"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Function to display the metrics
+        function displayResults(data) {
+            document.getElementById('accuracy').textContent = data.accuracy.toFixed(2);
+            document.getElementById('precision').textContent = data.precision.toFixed(2);
+            document.getElementById('recall').textContent = data.recall.toFixed(2);
+            document.getElementById('f1').textContent = data.f1.toFixed(2);
+
+            // Populate confusion matrix
+            const confMatrix = data.confusionMatrix;
+            const matrixBody = document.getElementById('confusion-matrix');
+            matrixBody.innerHTML = `
+                <tr>
+                    <td>Actual 0</td>
+                    <td>${confMatrix[0][0]}</td>
+                    <td>${confMatrix[0][1]}</td>
+                </tr>
+                <tr>
+                    <td>Actual 1</td>
+                    <td>${confMatrix[1][0]}</td>
+                    <td>${confMatrix[1][1]}</td>
+                </tr>
+            `;
+
+            // Plot ROC Curve
+            const rocCtx = document.getElementById('rocCurve').getContext('2d');
+            new Chart(rocCtx, {
+                type: 'line',
+                data: {
+                    labels: data.rocFpr,
+                    datasets: [{
+                        label: 'ROC Curve',
+                        data: data.rocTpr,
+                        borderColor: 'blue',
+                        fill: false
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: { title: { display: true, text: 'False Positive Rate' }},
+                        y: { title: { display: true, text: 'True Positive Rate' }}
+                    }
+                }
+            });
+
+            // Plot Feature Importance
+            const importanceCtx = document.getElementById('featureImportance').getContext('2d');
+            new Chart(importanceCtx, {
+                type: 'bar',
+                data: {
+                    labels: data.featureNames,
+                    datasets: [{
+                        label: 'Importance',
+                        data: data.featureImportance,
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Fetch data from the server
+        fetch('/model-evaluation')
+            .then(response => response.json())
+            .then(data => displayResults(data))
+            .catch(error => console.error('Error fetching the data:', error));
+    </script>
+</body>
+</html>

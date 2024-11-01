@@ -4,3 +4,9 @@ scikit-learn
 pandas
 fire
 joblib
+celery
+redis
+Flask-Login
+Flask-SocketIO
+Flask-WTF
+Flask-SQLAlchemy
