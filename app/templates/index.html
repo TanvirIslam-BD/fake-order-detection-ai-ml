@@ -1,4 +1,9 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
 
 <style>
     .upload-icon {
@@ -17,12 +22,20 @@
     display: block;
 }
 
+.model-hyperparameters {
+    display: flex;
+}
+
+.model-hyperparameters .form-group {
+    margin-right: 10px;
+}
+
 .custom-file-upload {
     position: relative;
     display: inline-block;
     width: 100%;
     padding: 10px;
-    border: 2px dashed #4caf50;
+    border: 1px dashed #6c757d;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -30,7 +43,7 @@
 }
 
 .custom-file-upload:hover {
-    border-color: #45a049;
+    border-color: #212529;
     background-color: #f1f1f1;
 }
 
@@ -66,21 +79,90 @@
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-size: 12px;
 }
 
 .summary th {
-    background-color: #4caf50;
+    background-color: #6c757d;
     color: white;
+    font-size: 11px;
 }
 
+.select-features-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.select2-container {
+    width: auto !important;
+}
+
+   h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .multi-select {
+            height: 150px;
+            overflow-y: auto;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+          /* Loader styling */
+      .loader {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        text-align: center;
+        background: #adadad8a;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        padding-top: 40%;
+     }
+
+        .loader .spinner {
+            width: 50px;
+            height: 50px;
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loader p {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
 
 </style>
 
 {% extends 'layout.html' %}
 
 {% block content %}
-<h1>Train EventBooking Order Classification Model</h1>
-<form method="post" action="/train-action" enctype="multipart/form-data">
+ <div class="container-wrapper">
+     <h1 style="text-align: center"> EB Order Classification Model</h1>
+<form id="trainForm" method="post" action="/train-action" enctype="multipart/form-data">
 
 
      <div class="form-group file-upload">
@@ -97,34 +179,129 @@
     <div id="summary" class="summary"></div>
 
     <!-- Label Column Selection -->
-    <div class="form-group" id="label-column-selection" style="display: none;">
+    <div class="form-group mt-2" id="label-column-selection" style="display: none;">
         <label for="labelColumn">Select Label Column:</label>
         <select name="labelColumn" id="labelColumn" class="form-control"></select>
     </div>
 
-    <!-- Model Hyperparameters -->
-    <h3>Model Hyperparameters</h3>
-    <div class="form-group">
-        <label for="learning_rate">Learning Rate</label>
-        <input type="number" step="0.01" class="form-control" id="learning_rate" name="learning_rate" value="0.05">
-    </div>
-    <div class="form-group">
-        <label for="max_iter">Maximum Iterations</label>
-        <input type="number" class="form-control" id="max_iter" name="max_iter" value="200">
-    </div>
-    <div class="form-group">
-        <label for="max_leaf_nodes">Max Leaf Nodes</label>
-        <input type="number" class="form-control" id="max_leaf_nodes" name="max_leaf_nodes" value="40">
-    </div>
-    <div class="form-group">
-        <label for="min_samples_leaf">Minimum Samples per Leaf</label>
-        <input type="number" class="form-control" id="min_samples_leaf" name="min_samples_leaf" value="10">
+   <div class="hidden-to-show" style="display: none;">
+        <h5 class="mt-2">Select Features</h5>
+        <div class="select-features-wrapper">
+             <div class="mt-2">
+               <label for="Date Fields">Categorical Fields</label>
+                <select id="categoricalFields" class="form-control multi-select select2" multiple></select>
+            </div>
+            <div class="mt-2">
+                <label for="Date Fields">Date Fields</label>
+               <select id="dateFields" class="form-control multi-select select2" multiple></select>
+            </div>
+            <div class="mt-2">
+              <label for="Date Fields">Numeric Fields</label>
+              <select id="numericFields" class="form-control multi-select select2" multiple></select>
+            </div>
+        </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Train Model</button>
+
+    <div class="hidden-to-show" style="display: none;">
+          <!-- Model Hyperparameters -->
+         <h5 class="mt-2">Model Hyperparameters</h5>
+        <div class="model-hyperparameters">
+            <div class="form-group">
+                <label for="learning_rate">Learning Rate</label>
+                <input type="number" step="0.01" class="form-control" id="learning_rate" name="learning_rate" value="0.05">
+            </div>
+            <div class="form-group">
+                <label for="max_iter">Maximum Iterations</label>
+                <input type="number" class="form-control" id="max_iter" name="max_iter" value="200">
+            </div>
+            <div class="form-group">
+                <label for="max_leaf_nodes">Max Leaf Nodes</label>
+                <input type="number" class="form-control" id="max_leaf_nodes" name="max_leaf_nodes" value="40">
+            </div>
+            <div class="form-group">
+                <label for="min_samples_leaf">Minimum Samples per Leaf</label>
+                <input type="number" class="form-control" id="min_samples_leaf" name="min_samples_leaf" value="10">
+            </div>
+        </div>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary mt-4"><i class="fas fa-play"></i>Train Model</button>
+
 </form>
 
+<!-- Modern Loader HTML -->
+<div class="loader">
+    <div class="spinner"></div>
+    <p>Training model, please wait...</p>
+</div>
+ </div>
+
 <script>
+
+    $(document).ready(function() {
+    $('.select2').select2({
+        placeholder: "Select options",
+        allowClear: true
+    });
+});
+
+    // Handle form submission to show loader
+    $('#trainForm').on('submit', function(event) {
+        // event.preventDefault(); // Prevent default form submission
+        $('.loader').show(); // Show loader
+
+        // Simulate model training process
+        setTimeout(() => {
+            // Replace this with your actual training function
+            // Example: submit the form or make an AJAX request here
+
+            $('.loader').hide(); // Hide loader after training (or on success)
+        }, 3000); // Simulate 3 seconds for training (adjust as needed)
+
+        // Optionally, make an AJAX request here
+        // $.ajax({
+        //     type: "POST",
+        //     url: $(this).attr('action'),
+        //     data: $(this).serialize(),
+        //     success: function(response) {
+        //         // Handle success
+        //     },
+        //     error: function(xhr) {
+        //         // Handle error
+        //     }
+        // });
+    });
+
+     // Function to populate the selection fields with column names
+        function populateFields(columns) {
+            const categoricalSelect = document.getElementById('categoricalFields');
+            const dateSelect = document.getElementById('dateFields');
+            const numericSelect = document.getElementById('numericFields');
+
+            columns.forEach(column => {
+                const option = document.createElement('option');
+                option.value = column;
+                option.textContent = column;
+
+                // // Add to the appropriate select based on its type
+                // if (/* condition to check if column is categorical */) {
+                    categoricalSelect.appendChild(option.cloneNode(true));
+                // } else if (/* condition to check if column is date */) {
+                    dateSelect.appendChild(option.cloneNode(true));
+                // } else if (/* condition to check if column is numeric */) {
+                    numericSelect.appendChild(option.cloneNode(true));
+                // }
+            });
+             // Refresh Select2 to show new options
+            categoricalSelect.trigger('change');
+            dateSelect.trigger('change');
+            numericSelect.trigger('change');
+
+        }
+
 
    document.getElementById('file').addEventListener('change', function() {
     const fileName = this.files[0] ? this.files[0].name : "No file chosen";
@@ -141,6 +318,8 @@
                 const data = parseCSV(contents);
                 displaySummary(data);
                 populateLabelColumn(data.headers);
+                $(".hidden-to-show").show();
+                populateFields(data.headers);
             };
 
             reader.readAsText(file);

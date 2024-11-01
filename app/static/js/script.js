@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Example: Provide default hyperparameters for RandomForest
     document.querySelector('select[name="model"]').addEventListener('change', function () {
-        if (this.value === 'RandomForest') {
-            hyperparamsInput.value = '{"n_estimators": 100, "max_depth": null}';
-        } else {
-            hyperparamsInput.value = '';
-        }
+        // if (this.value === 'RandomForest') {
+        //     hyperparamsInput.value = '{"n_estimators": 100, "max_depth": null}';
+        // } else {
+        //     hyperparamsInput.value = '';
+        // }
     });
 });
