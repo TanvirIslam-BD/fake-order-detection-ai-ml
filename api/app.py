@@ -1,4 +1,5 @@
 from flask import Flask, Response, request
+from sklearn.ensemble import HistGradientBoostingClassifier
 
 from .errors import errors
 from .handlers import predict as predict_handler
@@ -19,7 +20,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler, FunctionTransformer
+from services.price_cleaner import PriceCleaner
 
 app = Flask(__name__)
 # app.register_blueprint(errors)
@@ -27,41 +29,84 @@ app = Flask(__name__)
 # Constants
 np.random.seed(42)
 TIMESTAMP_FMT = "%m-%d-%Y, %H:%M:%S"
-LABEL: str = "target"
+LABEL: str = "Genuine Order"
 
 NUMERIC_FEATURES: List[str] = [
-    "age",
-    "trestbps",
-    "chol",
-    "fbs",
-    "thalach",
-    "exang",
-    "oldpeak",
+    "Amount (Total Price)",
+    "Tickets (Quantity)",
+    "Coupon amount",
 ]
 
 CATEGORICAL_FEATURES: List[str] = ["sex", "cp", "restecg", "ca", "slope", "thal"]
 
+# Additional date features
+DATE_FEATURES: List[str] = [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "day_of_week",
+]
+
+# Custom transformer to extract datetime features
+def extract_datetime_features(data_set):
+    data_set = data_set.copy()
+    data_set["order_date_time"] = pd.to_datetime(data_set["order_date_time"])
+    data_set["year"] = data_set["order_date_time"].dt.year
+    data_set["month"] = data_set["order_date_time"].dt.month
+    data_set["day"] = data_set["order_date_time"].dt.day
+    data_set["hour"] = data_set["order_date_time"].dt.hour
+    data_set["minute"] = data_set["order_date_time"].dt.minute
+    return data_set.drop(columns=["order_date_time"])
 
 # Create the pipeline function
 def create_pipeline(categorical_features: List[str], numeric_features: List[str]) -> Pipeline:
 
+    # Use StandardScaler for numeric features if scaling is desired (not strictly necessary for tree-based models)
     numeric_transformer = Pipeline(
-        steps=[("imputer", SimpleImputer(strategy="median")), ("scaler", StandardScaler())]
+        steps=[("scaler", StandardScaler())]
     )
 
+    # One-hot encode categorical features
     categorical_transformer = Pipeline(
         steps=[("imputer", SimpleImputer(strategy="constant")), ("onehot", OneHotEncoder(handle_unknown="ignore"))]
     )
 
+    # Preprocess datetime features
+    datetime_transformer = FunctionTransformer(extract_datetime_features, validate=False)
+
+    # Create the price cleaner
+    price_cleaner = PriceCleaner()
+
+    # Combine the transformations for price, datetime, numeric, and categorical data
     preprocessor = ColumnTransformer(
         transformers=[
+            ("price", price_cleaner, ["price"]),
+            ("datetime", datetime_transformer, ["order_date_time"]),
             ("num", numeric_transformer, numeric_features),
             ("cat", categorical_transformer, categorical_features),
         ]
     )
 
-    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", LogisticRegression())])
+    # Use HistGradientBoostingClassifier
+    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", HistGradientBoostingClassifier())])
 
+
+
+@app.route("/data-info", methods=["POST"])
+def data_info():
+    data = request.json
+    path = r"data/eb-order-data-final.csv"
+
+    # Load dataset
+    print(f"read_csv path {path}")
+    data_frame = pd.read_csv(path)
+    print(f"Data types and non-null values {data_frame.info()}") # Get data types and non-null values
+
+    print(f"statistical summary {data_frame.describe()}")
+    print(f"Preview the first few rows {data_frame.head()}")
+
+    return Response("OK", status=200)
 
 # Train route
 @app.route("/train", methods=["POST"])
@@ -71,16 +116,16 @@ def train():
     # path = os.getenv("MODEL_PATH", "data/pipeline.pkl"),
     # model_path = os.getenv("MODEL_PATH", "data/pipeline.pkl"),
     # metrics_path  = os.getenv("METRICS_PATH", "data/metrics.json"),
-    path = r"D:\sklearn-flask-api-demo\data\heart-disease.csv"
-    model_path = r"D:\sklearn-flask-api-demo\data\pipeline.pkl"
-    metrics_path = r"D:\sklearn-flask-api-demo\data\pmetrics.json"
+    path = r"data/eb-order-data-final.csv"
+    model_path = r"data/pipeline.pkl"
+    metrics_path = r"data/pmetrics.json"
     # model_path = data.get("model_path", "data/pipeline.pkl")
     # metrics_path = data.get("metrics_path", "data/metrics.json")
     test_size = data.get("test_size", 0.2)
     dump = data.get("dump", True)
 
     categorical_features = data.get("categorical_features", CATEGORICAL_FEATURES)
-    numeric_features = data.get("numeric_features", NUMERIC_FEATURES)
+    numeric_features = data.get("numeric_features", NUMERIC_FEATURES + DATE_FEATURES)
     label = data.get("label", LABEL)
 
     start = time.time()
@@ -88,6 +133,12 @@ def train():
     # Load dataset
     print(f"read_csv path {path}")
     data_frame = pd.read_csv(path)
+
+    # Clean the 'price' column
+    data_frame["price"] = data_frame["price"].str.replace(r'[^0-9.]', '', regex=True) # Remove any character except numeric values and decimal points
+    # Convert to numeric type
+    data_frame["price"] = pd.to_numeric(data_frame["price"])
+
     features = data_frame[categorical_features + numeric_features]
     target = data_frame[label]
 
@@ -109,17 +160,19 @@ def train():
     # Calculate metrics
 
     #Score on train set
-    acc = accuracy_score(model.predict(tx), ty) * 100
+    train_accuracy = accuracy_score(model.predict(tx), ty) * 100
+
     # Score on test set
-    val_acc = accuracy_score(model.predict(vx), vy) * 100
-    # Score on test set
+    test_accuracy = accuracy_score(model.predict(vx), vy) * 100
+
+    #  ROC AUC score on test set
     roc_auc = roc_auc_score(vy, model.predict_proba(vx)[:, -1])
 
     metrics = dict(
-        elapsed=end - start,
-        acc=acc,
-        val_acc=val_acc,
+        train_accuracy=train_accuracy,
+        test_accuracy=test_accuracy,
         roc_auc=roc_auc,
+        elapsed_time=end - start,
         timestamp=datetime.now().strftime(TIMESTAMP_FMT),
     )
 
