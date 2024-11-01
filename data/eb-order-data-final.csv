@@ -1,302 +1,301 @@
-Customer Name,Organisation Name,Event Name,Date & Time,Amount (Total Price),Tickets (Quantity),,Currency,Country,Processor,Reconciled,Coupon amount,Booking type,Status,Payment,Settled Date,Genuine Order
-,,,,,,,,,,,,,,,,
-Paresh Khatri,Brisbane Football Events Committee,BFEC Carnival 2024,10/31/2024 15:34,$30.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-GABRIAL GOSSAGE,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 15:29,$61.50 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Elizabeth Feszczenko,Tara Nada,Flamenco India &amp; Hindustani Concert,10/31/2024 15:28,$98.00 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-samantha gibbins,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 15:26,$62.10 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Paul Steen,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 15:16,$61.50 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Shandelle Simpson,Indonesian Chamber of Commerce WA,Kaya Micro Trade Expo,10/31/2024 15:10,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Faros Yogiswara,Indonesian Chamber of Commerce WA,Kaya: Indonesian Business Week Gala Dinner,10/31/2024 15:03,$367.80 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Saadia Saif,Woodlands St Kilda Road,Woodlands Professionals in Learning Conference 2024,10/31/2024 14:57,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jake Adair,RMIT ISA,ISA Halloween Cocktail Party🎃🍸,10/31/2024 14:57,$26.82 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Paul Cunningham,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 14:50,$61.50 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Liam Crook,Minnamurra Public School P&C,Minnamurra Public School P&amp;C Christmas Sale,10/31/2024 14:46,$81.90 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Kristen Mawbey,Minnamurra Public School P&C,Minnamurra Public School P&amp;C Christmas Sale,10/31/2024 14:36,$102.30 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Allison Johnston,Beth Miles,Wynyard 2024 Nutrimetics Christmas Launch,10/31/2024 14:29,$20.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Roman Davas-Fahey,Transparency International Australia,Transparency International Australia's Climate Integrity Dialogue,10/31/2024 14:01,$0.00 ,4,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Christina Di Rosa,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 14:00,$103.50 ,5,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Kalpesh Khatri,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/31/2024 13:58,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Zane Wylie,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 13:56,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Liesl Meissner,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 13:54,$30.90 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Natarsha Augustinovic,Łowicz Polish Vocal-Dance Ensemble,PRE POL-FEST PARTY 2024,10/31/2024 13:54,$15.60 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Reserved SA Power Networks,Adelaide Connected,Adelaide Connected 8.0,10/31/2024 13:53,$0.00 ,10,,AUD,Australia,SecurePay JS SDK,RECONCILED,$0.00 ,Complementary,Active,Paid,,0
-Chloe Kyrke-Smith,Product Aotearoa,Product Aotearoa Conference 2024,10/31/2024 13:49,"$1,800.00 ",5,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Celene Balois,Mrs Waikato NZ,Ms/Miss Voluptuous 2024 Crowning and Finals,10/31/2024 13:29,$35.00 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Shirly Kurian,Nazareth Ministries Global,Heal Your Life Conference - USA(Philadelphia),10/31/2024 13:26,$2.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Courtney Curran,Mel Bennett,2hr Sunday Yin Ritual,10/31/2024 13:24,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$28.00 ,Cash,Active,Paid,,0
-Ansharaah & Aaliyah Ahmed,DW Piano Studio,2024 Annual Piano Concert,10/31/2024 13:23,$0.00 ,5,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Penny Roffey,DW Piano Studio,2024 Annual Piano Concert,10/31/2024 13:22,$0.00 ,7,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Tasneem Gould,Product Aotearoa,Product Aotearoa Conference 2024,10/31/2024 13:22,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$400.00 ,Cash,Active,Paid,,0
-Dylan Betteridge,Merriwa Magpies,Merriwa Magpies 2024 Football Presentation,10/31/2024 13:21,$120.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Madison Brazier,DW Piano Studio,2024 Annual Piano Concert,10/31/2024 13:21,$0.00 ,7,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Sian Debenham,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 13:21,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Icey Bills,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 13:15,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Okezi Egbeme,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 13:09,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Mary Mascolo,DOUBLETREE POUGHKEEPSIE,NYE 2025 DOUBLETREE BY Hilton Poughkeepsie,10/31/2024 13:00,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-David Tucker,Melius Solutions,Transform Your Skills: Mastering Difficult Conversations,10/31/2024 12:56,$40.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Naomi Boyle,Brooke Charpentier,We Are Stars - Infused Dance,10/31/2024 12:49,$280.00 ,7,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Marjorie Anne Torres,Woodlands Truganina,Masquerade Party,10/31/2024 12:45,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Rebecca De Freitas,Emma Thomas,20 YEAR REUNION | Mackillop College Class of 2004,10/31/2024 12:38,$102.60 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Reserved Fragile to Agile,Adelaide Connected,Adelaide Connected 8.0,10/31/2024 12:34,$0.00 ,24,,AUD,Australia,SecurePay JS SDK,RECONCILED,$0.00 ,Complementary,Active,Paid,,0
-Jim Hutchinson,DOUBLETREE POUGHKEEPSIE,NYE 2025 DOUBLETREE BY Hilton Poughkeepsie,10/31/2024 12:26,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Kellee Schneider,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 12:21,$30.90 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Trevyn Bradley,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 12:17,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Sheirah Brilley,Emma Thomas,20 YEAR REUNION | Mackillop College Class of 2004,10/31/2024 12:16,$51.30 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Sara Weiler,The Covey Theater Company,"Macbeth - Friday, Nov. 15 at 7:30 PM",10/31/2024 12:16,$29.59 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Pat Gaby,Beth Miles,Wynyard 2024 Nutrimetics Christmas Launch,10/31/2024 12:09,$40.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Cody Murphy,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 12:07,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Simon Walmsley,Merriwa Magpies,Merriwa Magpies 2024 Football Presentation,10/31/2024 12:06,$60.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-allison Woytowich,Siber Sled Dogs LLC,Puppy Hour!,10/31/2024 11:50,$30.00 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Debra Pepper,Phil Hoffmann Travel,East Coast Rail &amp; Sail Meet &amp; Mingle,10/31/2024 11:43,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Steven Jones,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 11:42,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Elliot Del Greco,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/31/2024 11:41,$51.30 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Popoola Adenola,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 11:38,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jaynesh Kumar,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/31/2024 11:38,$0.00 ,4,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Chan Cheah,Transparency International Australia,Combatting Foreign Bribery: Impunity to Enforcement,10/31/2024 11:30,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Precious Chukwuma,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 11:27,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Dan Little,Ballin' on the Balonne,Ballin' on the Balonne,10/31/2024 11:26,$286.20 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Richard Brough,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 11:25,$51.30 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Dilip Kapadia,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/31/2024 11:19,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Eric Bernard,Melbourne Tabla School,Melbourne Tabla School Concert 2024,10/31/2024 11:16,$18.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Dineesha Gohil,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/31/2024 11:14,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Leez Robertson,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 11:13,$82.50 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-John Van Dyk,Biblical Counselling Australia,Living Biblically: Helping People Navigate Life's Challenges,10/31/2024 11:08,$36.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Vivi Chu,High performance training and coaching Ltd,Women in business VIP event Auckland 31st October 2024,10/31/2024 11:07,$38.00 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/31/2024,0
-Lizyamma Varughese,Nazareth Ministries Global,Heal Your Life Conference - USA(Philadelphia),10/31/2024 11:03,$4.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Kat Con,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/31/2024 11:02,$102.30 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-dicle dogan,Bozuk Plak,Halloween Party,10/31/2024 11:01,£120.00,4,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/31/2024,0
-Lizyamma Varughese,Nazareth Ministries Global,Heal Your Life Conference - USA(Philadelphia),10/31/2024 11:00,$4.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Natasha Janson,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 10:59,$82.80 ,4,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Belinda Giudice,Harnessing the Science of Learning,Harnessing the Science of Learning Sydney Launch,10/31/2024 10:55,$112.80 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Michał Howorski,Łowicz Polish Vocal-Dance Ensemble,PRE POL-FEST PARTY 2024,10/31/2024 10:55,$296.40 ,19,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Madison Bouillir,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/31/2024 10:53,$296.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Joris Potignon,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 10:52,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Victor Filani,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:50,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Ian Brown,Phil Hoffmann Travel,East Coast Rail &amp; Sail Meet &amp; Mingle,10/31/2024 10:49,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jillian Heppner,Phil Hoffmann Travel,Phil Hoffmann Travel Victor Harbor Showcase,10/31/2024 10:44,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Fikayo Ibitoye,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:39,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Awodele Ifashalewa,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:39,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Olapeju Fasoro,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:38,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-MITESH GOHIL,Brisbane Football Events Committee,BFEC Carnival 2024,10/31/2024 10:37,$30.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Taya Whitelaw,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 10:37,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Emily Thompson,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 10:32,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Mitesh Gohil,Brisbane Football Events Committee,BFEC Carnival 2024,10/31/2024 10:30,$45.00 ,4,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Abdulafeez Wasilat oluwatoyin,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:30,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Gemma Delatorre,VaVoom Room,Just For Tips + Giggles (18+ only),10/31/2024 10:29,$30.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Francesco Macri,Risque Society,Halloween,10/31/2024 10:27,$304.56 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Diheter Castilla,Class of 2004 President,Hawthorne High Class 04 Reunion,10/31/2024 10:19,$30.90 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Yasin Demir,Bozuk Plak,Halloween Party,10/31/2024 10:13,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Ifeoluwa Adeyemi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 10:11,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Taryn Blower,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 10:06,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Travis Jackson,Melius Solutions,Transform Your Skills: Mastering Difficult Conversations,10/31/2024 10:06,$40.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Georgia Roberts,Fab Finds Markets,Fab Finds Markets - 24th November 2024,10/31/2024 9:50,$40.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Claire Jones,Phil Hoffmann Travel,Phil Hoffmann Corporate Travel Christmas Party,10/31/2024 9:49,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Manoj Kumar,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/31/2024 9:48,$0.00 ,3,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Enoch Sunday,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 9:47,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-John Fargher,Phil Hoffmann Travel,Phil Hoffmann Corporate Travel Christmas Party,10/31/2024 9:47,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Olivia Harrison,Ballin' on the Balonne,Ballin' on the Balonne,10/31/2024 9:47,$286.20 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Aggie Hobbs,India Bence,TASU Christmas Party 2024,10/31/2024 9:45,$30.90 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Faye Khan,Masjid Ayesha,Back to Basics - Islamic Studies Course [For Sisters],10/31/2024 9:45,£0.00,1,,AUD,Australia,Cash,NOT RECONCILED,£0.00,Cash,Active,Paid,,0
-Max Glyde,Northern Beaches Beekeepers,NBB Monthly Meeting - Small Hive Beetle Management,10/31/2024 9:42,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Alexandra Barclay,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 9:39,$41.10 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Michelle Ferris,Edmund Rice Community Services (NSW),ERCS Gala Dinner,10/31/2024 9:39,$250.50 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$15.00 ,Card,Active,Paid,,0
-Emily Bluck,Samantha Conway,BONFIRE NIGHT @ THE MUSTARD POT (4pm),10/31/2024 9:39,£30.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Rachael Avins,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 9:35,$62.10 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-mary parrot,Helloworld Travel HTG,APT - A World of Travel - FREE Presentation - East Maitland,10/31/2024 9:32,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Julia Bolles,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/31/2024 9:30,$81.90 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Kim Irwin,Minnamurra Public School P&C,Minnamurra Public School P&amp;C Christmas Sale,10/31/2024 9:30,$81.90 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Umut Yanik,Bozuk Plak,Halloween Party,10/31/2024 9:29,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Christie Everding,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 9:26,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Terry Howe,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 9:25,$45.27 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Cameron Gallagher,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 9:22,$82.80 ,4,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Kirstin Ohlsson,VaVoom Room,Just For Tips + Giggles (18+ only),10/31/2024 9:14,$30.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Amelia Arena,5 Years of Friendship,5 Years of Friendship - 2024,10/31/2024 9:12,$90.66 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Elif Taskiran,Bozuk Plak,Halloween Party,10/31/2024 9:08,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Ruya Oz,Bozuk Plak,Halloween Party,10/31/2024 9:06,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Marilyn Osborne,Phil Hoffmann Travel,East Coast Rail &amp; Sail Meet &amp; Mingle,10/31/2024 9:05,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jade Dufty,RMIT ISA,ISA Halloween Cocktail Party🎃🍸,10/31/2024 9:04,$26.82 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Ginger Li,Product Aotearoa,Product Aotearoa Conference 2024,10/31/2024 9:04,"$3,600.00 ",10,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Yezda Ozdemir,Bozuk Plak,Halloween Party,10/31/2024 9:03,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Jemma Ritson,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 8:57,$20.70 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Adesewa Hiqmah,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 8:56,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Mattia De Rosa,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 8:55,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Amanda Aphale,halow project,Illuminate Guildford,10/31/2024 8:54,£15.45,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Mehdi Mohamadi,FailForward,FailForward x Mesh Community / Matrikel1,10/31/2024 8:52,kr0.00,1,,AUD,Australia,Cash,NOT RECONCILED,kr0.00,Cash,Active,Paid,,0
-Cathy Williams,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 8:48,$74.34 ,3,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Melanie Inturrisi,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/31/2024 8:48,$149.52 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Tom Marchel,Rotary Club of Central Launceston,Sally's Ride 2024,10/31/2024 8:44,$41.10 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Olfa Ben Salah,Bozuk Plak,Halloween Party,10/31/2024 8:43,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Sanusi Usman,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 8:28,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Victor Yan,Donella ODonnell,Halloween House Party,10/31/2024 8:23,£0.00,2,,AUD,Australia,Cash,NOT RECONCILED,£0.00,Cash,Active,Paid,,0
-Kathleen Foster,Harnessing the Science of Learning,Harnessing the Science of Learning Sydney Launch,10/31/2024 8:20,$56.40 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Andrea giorgio Albanese,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 8:17,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Erol Mustafa,Bozuk Plak,Halloween Party,10/31/2024 8:17,£120.00,4,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Diana Thomas,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 8:13,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Mariarca Raiola,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 8:03,€ 4.50,1,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Jumoke Olawunmi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 8:03,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Stephen Payn,halow project,Sports Group,10/31/2024 7:58,£13.43,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Jennifer Higgins,Class of 2004 President,Hawthorne High Class 04 Reunion,10/31/2024 7:57,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Adeola Omowunmi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 7:56,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Fatemeh Mohamadpoor,Tas North Iranian Australian Community,شب یلدای ۱۴۰۳/ ۲۰۲۴ شمال تاسمانیا,10/31/2024 7:51,$61.80 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Tory Montalvo,Sandy's Shack Imported Wine & Beer,6h00pm Halloween Gourmet Tasting,10/31/2024 7:46,$15.00 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Mel Hargrave,Amalfi White,Las Vegas Party Night,10/31/2024 7:42,£228.15,3,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Dan Dan,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 7:41,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jamila E,Adiwahab Abdisalam,CAN I ASK YOU A QUESTION?  PART 2,10/31/2024 7:40,£50.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Reign Ryan,Ballin' on the Balonne,Ballin' on the Balonne,10/31/2024 7:34,$143.10 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Atakan Kartal,Bozuk Plak,Halloween Party,10/31/2024 7:32,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Nita Melissa,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/31/2024 7:27,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Dorothy Scally,Helloworld Travel HTG,APT - A World of Travel - MEET THE EXPERT - Kotara,10/31/2024 7:21,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Mose Adan,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 7:17,£30.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Amber Bergren,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 7:06,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Sam Hughes,Valerie Viot,Charity Psychic Night,10/31/2024 6:58,£50.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Alexander Griffin,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 6:48,£15.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Philip Spicer,British Association for Strategic Affairs,Dinner with Edward Lucas,10/31/2024 6:45,£155.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Kelechi Ubi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 6:39,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-William Russell,A Night at the Musicals,"A Holly, Jolly Christmas!",10/31/2024 6:32,£20.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Karen Kadach,Proclamation Studios,Proclamation Studios Christmas Gala - Evening Gala and Dance,10/31/2024 6:22,$30.60 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Anneka He,Ana Mosterin Hopping,Dancing to different orchestras - Musicality workshops by Emilia Andrada,10/31/2024 6:21,£25.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Olu Tola,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 6:21,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Emmanuel Adebisi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 6:17,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Michael Adekola,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 6:14,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jeremy Mead,Merriwa Magpies,Merriwa Magpies 2024 Football Presentation,10/31/2024 6:08,$60.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Raffaele Crispino,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 6:06,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Oluwakayode Mustapha,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 6:06,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Clare Murray,British Paediatric Respiratory Society,BPRS Annual Dinner 2024,10/31/2024 6:03,£70.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Will Underwood,Nicole Dixon,SUPERHEROS & SUPERVILLANS - Nicole/maddie/sophie’s birthday bash,10/31/2024 5:56,£8.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Halenur Dogan,Bozuk Plak,Halloween Party,10/31/2024 5:54,£20.00,1,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Hattie Hansard,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 5:54,£75.00,5,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Anna Jablonska,Spotkania Biznesowe Swansea,Poznajmy się przy muzyce na żywo!,10/31/2024 5:45,£10.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Thomas Woodman,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 5:36,£30.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Eranda Kock,One Heart,Johan Van Vuren @Dei Gratia,10/31/2024 5:36,$0.00 ,2,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Michele Haunschild,Sedgwick County ACE,Election Day Pride Raffle,10/31/2024 5:34,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jody Nielsen,Sandy's Shack Imported Wine & Beer,5h00pm Halloween Gourmet Tasting,10/31/2024 5:32,$30.00 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Esther Toke,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 5:21,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Fauziyyat Bello,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 5:21,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Ronel Botha,One Heart,Johan van Vuren @Christ Life Revival Ministries,10/31/2024 5:13,$0.00 ,2,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Adegoke Gideon,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 5:12,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Abdulwadood Salaudeen,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 5:10,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Emily Raby,Class of 2004 President,Hawthorne High Class 04 Reunion,10/31/2024 4:59,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Jan Botha,One Heart,Johan Van Vuren @Dei Gratia,10/31/2024 4:58,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Bjorn Woldbeck,The Covey Theater Company,"Macbeth - Friday, Nov. 22 at 7:30 PM",10/31/2024 4:57,$29.59 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Oluwafemi Aliu,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 4:53,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Daria Oslo,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/31/2024 4:52,lei0.00,6,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Amoo Bidemi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 4:43,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Brian Bollinger,Morgan Szymanski,Rewind VIP Screening,10/31/2024 4:35,$50.00 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Colin Kneller,The Classic Blues Show,The Classic Blues Show - Shrewsbury Abbey,10/31/2024 4:35,£36.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,,0
-Manuel Roman,ACAIC N ADAIC Valle Delaware,Cena Conferencia para Matrimonio,10/31/2024 4:34,$121.80 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Erik Gidney,PNW SOL,"Countdown to Life, 800 Octane, and Berzerk Nov. 1st 2024",10/31/2024 4:26,$15.45 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Christian Erling,rave4romania,rave4romania – München,10/31/2024 4:24,€ 15.00,1,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Dana Maresca,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 4:15,€ 4.50,1,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Javier Arboledas,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 4:04,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Amos Adeniyi,John Awobode,African Praise Group Canada 2024 Christmas Carol,10/31/2024 3:57,$0.00 ,3,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Luis Diaz,Sandy's Shack Imported Wine & Beer,6h00pm Halloween Gourmet Tasting,10/31/2024 3:56,$30.00 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Benjamin Praise,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 3:52,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jesse Vasquez,CDS Youth,CAMPAMENTO DE JÓVENES-  Costo sera de $145.00,10/31/2024 3:39,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Ramón Ortega,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 3:28,€ 0.00,2,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Israel Vasquez,CDS Youth,CAMPAMENTO DE JÓVENES-  Costo sera de $145.00,10/31/2024 3:27,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Helena Dyck,Michelle Granter,Yetwood's Christmas Celebration Event- Bowling,10/31/2024 3:23,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-George Dyck,Michelle Granter,Yetwood's Christmas Celebration Event- Bowling,10/31/2024 3:19,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Issie Deady-Pearce,Nicole Dixon,SUPERHEROS & SUPERVILLANS - Nicole/maddie/sophie’s birthday bash,10/31/2024 3:18,£8.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Daniel Schrant,Sedgwick County ACE,Election Day Pride Raffle,10/31/2024 3:06,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Maxwell Adewumi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 3:05,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Luigi Menna,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 3:02,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Danija Rozenberga,Nazareth Ministries Global,Prophetic &amp; Deliverance Training - 2025,10/31/2024 3:02,$10.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Moyo Adeyeye,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 2:56,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Stephen KOLAWOLE,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 2:54,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Albin Alias,Nazareth Ministries Global,Heal Your Life Conference - USA(Philadelphia),10/31/2024 2:50,$4.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Oyinloluwa Michael,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 2:50,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jackson Wooten,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 2:31,£15.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Serafina Soehianto,ASCUS Art & Science,ASCUS Lab Evening Sessions,10/31/2024 2:31,£18.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Ayodeji Kayode,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 2:24,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Isabel Roldan,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 2:20,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Frank Ventura,Alexis Taylor,CLUB LEX 26 BIRTHDAY BASH ALL WHITE,10/31/2024 2:06,$60.90 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Robert Crookes,A Night at the Musicals,"A Holly, Jolly Christmas!",10/31/2024 2:02,£30.00,3,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Sara Iannotti,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 1:56,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Maria Teresa Monfrecola,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 1:53,€ 4.50,1,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Bamidele Samuel,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:46,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Helen Goddard,Yardley Baptist Church,Celtish Christmas Concert 2024,10/31/2024 1:40,£0.00,2,,AUD,Australia,Cash,NOT RECONCILED,£0.00,Cash,Active,Paid,,0
-Fabrizia Mattei,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 1:37,€ 4.50,1,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Michael Watts,Careers Unlimited,Jobs Expo Cork,10/31/2024 1:35,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Anna-Karin Jones,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 1:34,£30.00,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Michael Jones,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/31/2024 1:32,£15.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Adeola Omolara,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:31,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Aduragbemi Grace,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:31,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Musuruca Giorgio,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/31/2024 1:30,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Inmaculada Galindo,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 1:28,€ 0.00,2,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Dawud Tieb Fernández,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 1:22,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Rahil Alhaj kassem Alakhras,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 1:22,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Christopher Joy,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:15,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Olarenwaju Afeez,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:14,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Noura Moreno El Hadri,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/31/2024 1:13,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Alicia Herrera,Sedgwick County ACE,Election Day Pride Raffle,10/31/2024 1:11,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Michael Bright,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:11,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Theodore Arnold-Moore,The Gentleman’s Wargame Club Inc.,Melbourne Gaming Show - MEGA 2024 - Tickets,10/31/2024 1:10,$10.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Adelaja Funsho,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 1:00,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Ailincai Emira,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/31/2024 0:59,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Constantina Christoforou,NW Hearts Charity,Heart Excellence Celebration,10/31/2024 0:44,£35.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Michael Watt,Atlantis Beach Baptist College,ABBC The Fathering Project Fishing and Harbour Games,10/31/2024 0:43,$0.00 ,2,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Thomas Hurley,Nicole Dixon,SUPERHEROS & SUPERVILLANS - Nicole/maddie/sophie’s birthday bash,10/31/2024 0:40,£8.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Natalia Kurzecki,Łowicz Polish Vocal-Dance Ensemble,PRE POL-FEST PARTY 2024,10/31/2024 0:40,$62.40 ,4,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Fragile to Agile Reserved,Adelaide Connected,Adelaide Connected 8.0,10/31/2024 0:39,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Dijvar Bekem,Bozuk Plak,Halloween Party,10/31/2024 0:39,£60.00,2,,GBP,UK,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Aurora Aponte,Associazione Ricreativa Culturale South Market,SOUTH MARKET - VOL. 6,10/31/2024 0:37,€ 9.00,2,,USD,USA,Stripe,NOT RECONCILED,€ 0.00,Card,Active,Paid,10/30/2024,0
-Hanna Richardson,The Covey Theater Company,"Macbeth - Friday, Nov. 15 at 7:30 PM",10/31/2024 0:35,$59.18 ,2,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,10/30/2024,0
-Amaka Faustina,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 0:33,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Philippa Millington,NW Hearts Charity,Heart Excellence Celebration,10/31/2024 0:25,£35.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Iasmina Paduraru,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/31/2024 0:22,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Robert Dellinger,Beaufort Firemen's Association,3rd Annual Crystal Coast Fire Conference,10/31/2024 0:21,$101.30 ,1,,USD,USA,Stripe,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-ACS Reserved,Adelaide Connected,Adelaide Connected 8.0,10/31/2024 0:20,$0.00 ,9,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Dankenz Ayo,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 0:13,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Corey Woods,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/31/2024 0:13,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Olaoluwa Olayanju,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/31/2024 0:08,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Sue Robson,WAVES Blood Bank,Santa Paws @ WAVES 2024,10/31/2024 0:07,$66.60 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Katrina Kettley,WAVES Blood Bank,Santa Paws @ WAVES 2024,10/31/2024 0:02,$66.60 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Sarah Butler,Cairns Harbourside Hotel,Christmas Day Lunch,10/31/2024 0:02,$365.76 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Harry Johnson,RMIT ISA,ISA Halloween Cocktail Party🎃🍸,10/30/2024 23:58,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$26.00 ,Cash,Active,Paid,,0
-jack clemson,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/30/2024 23:55,$148.20 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Israel Adegoke,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 23:55,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Rebecca Ellis,Cavill Lane Surfers Paradise,The Haunted Passage Doomsday - Dark Illusions Experience,10/30/2024 23:53,$41.40 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Victoria Benson,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 23:51,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Nataliia Vinnytska,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/30/2024 23:49,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Mayur Narsey,Brisbane Football Events Committee,BFEC Carnival 2024,10/30/2024 23:49,$30.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Miguel Ramos,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/30/2024 23:37,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Elizabeth Asigau,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Daera Rarua,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Moale Tau,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Karen Kirewo,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Roberta Morlin,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Christine Waram,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Gizella Waram,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Kemi Waram,BSP Financial Group Ltd,Fun Day Test 2024,10/30/2024 23:36,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Sarah Murray,Lucy Brackley,Haddenham Wreath Making 2024,10/30/2024 23:35,£96.56,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Knowledge Chirangaza,Atlantis Beach Baptist College,ABBC The Fathering Project Fishing and Harbour Games,10/30/2024 23:27,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Halima Habil,Mary Magdalene,"Halloween with Mary Magdalene, Live at St. Pancras Old Church",10/30/2024 23:18,£15.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Ashrin Chand,Melbourne Tabla School,Melbourne Tabla School Concert 2024,10/30/2024 23:14,$28.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Nikala Kundevski,ČEKOR MDC Events,ČEKOR Cocktail Night,10/30/2024 23:13,$450.00 ,4,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Aidan Mong,Indonesian Chamber of Commerce WA,Kaya Micro Trade Expo,10/30/2024 23:09,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Matei Ancuta,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/30/2024 23:09,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Lateefah Oshunsanya,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 23:09,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Julie Cardrick,Grant Davis,"The Southammers, live at Thurlestone",10/30/2024 23:07,£20.80,2,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Esther Olajumoke,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:51,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Lina Leaufagatele,Women By Design,WBD EOY Celebrations 2024,10/30/2024 22:48,$0.00 ,3,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Lydia Atmadji,Indonesian Chamber of Commerce WA,Kaya Micro Trade Expo,10/30/2024 22:41,$0.00 ,1,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Tiana Gleeson,Merriwa Magpies,Merriwa Magpies 2024 Football Presentation,10/30/2024 22:38,$60.00 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Ashleigh Waldron,Groovy Baby Entertainment,GBE x Echo Beach. Vol 8,10/30/2024 22:36,$148.20 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Micu Denis-Gabriel,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/30/2024 22:35,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Tatiana Ortegon,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/30/2024 22:29,€ 0.00,3,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Ronnie Teague,A Night at the Musicals,"A Holly, Jolly Christmas!",10/30/2024 22:24,£10.00,1,,USD,USA,Stripe,NOT RECONCILED,£0.00,Card,Active,Paid,10/30/2024,0
-Alayo  Esther ,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:24,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Javier García Arias,Centro de Culturas Eslavas UGR,Concierto Saludos de amor,10/30/2024 22:21,€ 0.00,1,,AUD,Australia,Cash,NOT RECONCILED,€ 0.00,Cash,Active,Paid,,0
-Esther Oyewole,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:18,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jose  Oluwakunmi,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:17,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Isadora Jarosek,Łowicz Polish Vocal-Dance Ensemble,PRE POL-FEST PARTY 2024,10/30/2024 22:16,$15.60 ,1,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-dhriti Hajrat,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/30/2024 22:15,$0.00 ,5,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Israel Toluwalope Olaleye,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:05,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-yogita rathod,Kshatriya Society of Brisbane,RSVP SOCIAL CLUB FUNCTION : NUTAN VARSH CELEBRATION,10/30/2024 22:05,$0.00 ,5,,AUD,Australia,Cash,RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Oladeji Adegbola,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 22:02,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Dăscalița Steluța,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/30/2024 22:02,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Katie Towns,Brooke Charpentier,We Are Stars - Infused Dance,10/30/2024 22:00,$80.00 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
-Șerban Ștefan,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/30/2024 21:57,lei0.00,1,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Darius Sofronia,Balul Bobocilor LTMC Pascani,Balul Bobocilor LTMC 2024,10/30/2024 21:54,lei0.00,4,,AUD,Australia,Cash,NOT RECONCILED,lei0.00,Cash,Active,Paid,,0
-Olaniregun Blessing,OCTA HQ -lifeoftwinklee,LUNGU RAVE,10/30/2024 21:52,$0.00 ,1,,AUD,Australia,Cash,NOT RECONCILED,$0.00 ,Cash,Active,Paid,,0
-Jayde Stretton,Ballin' on the Balonne,Ballin' on the Balonne,10/30/2024 21:50,$286.20 ,2,,AUD,Australia,SecurePay JS SDK,NOT RECONCILED,$0.00 ,Card,Active,Paid,,0
+Customer Name,Date & Time,Amount (Total Price),Tickets (Quantity),Currency,Country,Coupon amount,Booking type,Payment,Genuine Order
+Paresh Khatri,10/31/2024 15:34,$30.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+GABRIAL GOSSAGE,10/31/2024 15:29,$61.50 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Elizabeth Feszczenko,10/31/2024 15:28,$98.00 ,2,USD,USA,$0.00 ,Card,Paid,1
+samantha gibbins,10/31/2024 15:26,$62.10 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+Paul Steen,10/31/2024 15:16,$61.50 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Shandelle Simpson,10/31/2024 15:10,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Faros Yogiswara,10/31/2024 15:03,$367.80 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Saadia Saif,10/31/2024 14:57,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Jake Adair,10/31/2024 14:57,$26.82 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Paul Cunningham,10/31/2024 14:50,$61.50 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Liam Crook,10/31/2024 14:46,$81.90 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Kristen Mawbey,10/31/2024 14:36,$102.30 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Allison Johnston,10/31/2024 14:29,$20.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Roman Davas-Fahey,10/31/2024 14:01,$0.00 ,4,AUD,Australia,$0.00 ,Cash,Paid,1
+Christina Di Rosa,10/31/2024 14:00,$103.50 ,5,AUD,Australia,$0.00 ,Card,Paid,1
+Kalpesh Khatri,10/31/2024 13:58,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Zane Wylie,10/31/2024 13:56,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Liesl Meissner,10/31/2024 13:54,$30.90 ,2,USD,USA,$0.00 ,Card,Paid,1
+Natarsha Augustinovic,10/31/2024 13:54,$15.60 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Reserved SA Power Networks,10/31/2024 13:53,$0.00 ,10,AUD,Australia,$0.00 ,Complementary,Paid,1
+Chloe Kyrke-Smith,10/31/2024 13:49,"$1,800.00 ",5,USD,USA,$0.00 ,Card,Paid,1
+Celene Balois,10/31/2024 13:29,$35.00 ,1,USD,USA,$0.00 ,Card,Paid,1
+Shirly Kurian,10/31/2024 13:26,$2.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Courtney Curran,10/31/2024 13:24,$0.00 ,1,AUD,Australia,$28.00 ,Cash,Paid,1
+Ansharaah & Aaliyah Ahmed,10/31/2024 13:23,$0.00 ,5,AUD,Australia,$0.00 ,Cash,Paid,1
+Penny Roffey,10/31/2024 13:22,$0.00 ,7,AUD,Australia,$0.00 ,Cash,Paid,1
+Tasneem Gould,10/31/2024 13:22,$0.00 ,1,AUD,Australia,$400.00 ,Cash,Paid,1
+Dylan Betteridge,10/31/2024 13:21,$120.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Madison Brazier,10/31/2024 13:21,$0.00 ,7,AUD,Australia,$0.00 ,Cash,Paid,1
+Sian Debenham,10/31/2024 13:21,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Icey Bills,10/31/2024 13:15,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Okezi Egbeme,10/31/2024 13:09,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Mary Mascolo,10/31/2024 13:00,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+David Tucker,10/31/2024 12:56,$40.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Naomi Boyle,10/31/2024 12:49,$280.00 ,7,AUD,Australia,$0.00 ,Card,Paid,1
+Marjorie Anne Torres,10/31/2024 12:45,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Rebecca De Freitas,10/31/2024 12:38,$102.60 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Reserved Fragile to Agile,10/31/2024 12:34,$0.00 ,24,AUD,Australia,$0.00 ,Complementary,Paid,1
+Jim Hutchinson,10/31/2024 12:26,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Kellee Schneider,10/31/2024 12:21,$30.90 ,2,USD,USA,$0.00 ,Card,Paid,1
+Trevyn Bradley,10/31/2024 12:17,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,1
+Sheirah Brilley,10/31/2024 12:16,$51.30 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Sara Weiler,10/31/2024 12:16,$29.59 ,1,USD,USA,$0.00 ,Card,Paid,1
+Pat Gaby,10/31/2024 12:09,$40.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Cody Murphy,10/31/2024 12:07,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,1
+Simon Walmsley,10/31/2024 12:06,$60.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+allison Woytowich,10/31/2024 11:50,$30.00 ,1,USD,USA,$0.00 ,Card,Paid,1
+Debra Pepper,10/31/2024 11:43,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Steven Jones,10/31/2024 11:42,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Elliot Del Greco,10/31/2024 11:41,$51.30 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Popoola Adenola,10/31/2024 11:38,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Jaynesh Kumar,10/31/2024 11:38,$0.00 ,4,AUD,Australia,$0.00 ,Cash,Paid,1
+Chan Cheah,10/31/2024 11:30,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Precious Chukwuma,10/31/2024 11:27,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Dan Little,10/31/2024 11:26,$286.20 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Richard Brough,10/31/2024 11:25,$51.30 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Dilip Kapadia,10/31/2024 11:19,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Eric Bernard,10/31/2024 11:16,$18.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Dineesha Gohil,10/31/2024 11:14,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Leez Robertson,10/31/2024 11:13,$82.50 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+John Van Dyk,10/31/2024 11:08,$36.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Vivi Chu,10/31/2024 11:07,$38.00 ,2,USD,USA,$0.00 ,Card,Paid,1
+Lizyamma Varughese,10/31/2024 11:03,$4.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Kat Con,10/31/2024 11:02,$102.30 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+dicle dogan,10/31/2024 11:01,£120.00,4,GBP,UK,£0.00,Card,Paid,1
+Lizyamma Varughese,10/31/2024 11:00,$4.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Natasha Janson,10/31/2024 10:59,$82.80 ,4,AUD,Australia,$0.00 ,Card,Paid,1
+Belinda Giudice,10/31/2024 10:55,$112.80 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Michał Howorski,10/31/2024 10:55,$296.40 ,19,AUD,Australia,$0.00 ,Card,Paid,1
+Madison Bouillir,10/31/2024 10:53,$296.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Joris Potignon,10/31/2024 10:52,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Victor Filani,10/31/2024 10:50,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Ian Brown,10/31/2024 10:49,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Jillian Heppner,10/31/2024 10:44,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Fikayo Ibitoye,10/31/2024 10:39,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Awodele Ifashalewa,10/31/2024 10:39,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Olapeju Fasoro,10/31/2024 10:38,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+MITESH GOHIL,10/31/2024 10:37,$30.00 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Taya Whitelaw,10/31/2024 10:37,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Emily Thompson,10/31/2024 10:32,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Mitesh Gohil,10/31/2024 10:30,$45.00 ,4,AUD,Australia,$0.00 ,Card,Paid,1
+Abdulafeez Wasilat oluwatoyin,10/31/2024 10:30,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Gemma Delatorre,10/31/2024 10:29,$30.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Francesco Macri,10/31/2024 10:27,$304.56 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Diheter Castilla,10/31/2024 10:19,$30.90 ,2,USD,USA,$0.00 ,Card,Paid,1
+Yasin Demir,10/31/2024 10:13,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Ifeoluwa Adeyemi,10/31/2024 10:11,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Taryn Blower,10/31/2024 10:06,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Travis Jackson,10/31/2024 10:06,$40.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Georgia Roberts,10/31/2024 9:50,$40.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Claire Jones,10/31/2024 9:49,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Manoj Kumar,10/31/2024 9:48,$0.00 ,3,AUD,Australia,$0.00 ,Cash,Paid,1
+Enoch Sunday,10/31/2024 9:47,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+John Fargher,10/31/2024 9:47,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Olivia Harrison,10/31/2024 9:47,$286.20 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Aggie Hobbs,10/31/2024 9:45,$30.90 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Faye Khan,10/31/2024 9:45,£0.00,1,AUD,Australia,£0.00,Cash,Paid,1
+Max Glyde,10/31/2024 9:42,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Alexandra Barclay,10/31/2024 9:39,$41.10 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Michelle Ferris,10/31/2024 9:39,$250.50 ,2,AUD,Australia,$15.00 ,Card,Paid,1
+Emily Bluck,10/31/2024 9:39,£30.00,1,USD,USA,£0.00,Card,Paid,1
+Rachael Avins,10/31/2024 9:35,$62.10 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+mary parrot,10/31/2024 9:32,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,1
+Julia Bolles,10/31/2024 9:30,$81.90 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Kim Irwin,10/31/2024 9:30,$81.90 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Umut Yanik,10/31/2024 9:29,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Christie Everding,10/31/2024 9:26,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Terry Howe,10/31/2024 9:25,$45.27 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+Cameron Gallagher,10/31/2024 9:22,$82.80 ,4,AUD,Australia,$0.00 ,Card,Paid,1
+Kirstin Ohlsson,10/31/2024 9:14,$30.00 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Amelia Arena,10/31/2024 9:12,$90.66 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+Elif Taskiran,10/31/2024 9:08,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Ruya Oz,10/31/2024 9:06,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Marilyn Osborne,10/31/2024 9:05,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Jade Dufty,10/31/2024 9:04,$26.82 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Ginger Li,10/31/2024 9:04,"$3,600.00 ",10,USD,USA,$0.00 ,Card,Paid,1
+Yezda Ozdemir,10/31/2024 9:03,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Jemma Ritson,10/31/2024 8:57,$20.70 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Adesewa Hiqmah,10/31/2024 8:56,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Mattia De Rosa,10/31/2024 8:55,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,1
+Amanda Aphale,10/31/2024 8:54,£15.45,1,USD,USA,£0.00,Card,Paid,1
+Mehdi Mohamadi,10/31/2024 8:52,kr0.00,1,AUD,Australia,kr0.00,Cash,Paid,1
+Cathy Williams,10/31/2024 8:48,$74.34 ,3,AUD,Australia,$0.00 ,Card,Paid,1
+Melanie Inturrisi,10/31/2024 8:48,$149.52 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Tom Marchel,10/31/2024 8:44,$41.10 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Olfa Ben Salah,10/31/2024 8:43,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Sanusi Usman,10/31/2024 8:28,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Victor Yan,10/31/2024 8:23,£0.00,2,AUD,Australia,£0.00,Cash,Paid,1
+Kathleen Foster,10/31/2024 8:20,$56.40 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Andrea giorgio Albanese,10/31/2024 8:17,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,1
+Erol Mustafa,10/31/2024 8:17,£120.00,4,GBP,UK,£0.00,Card,Paid,1
+Diana Thomas,10/31/2024 8:13,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Mariarca Raiola,10/31/2024 8:03,€ 4.50,1,USD,USA,€ 0.00,Card,Paid,1
+Jumoke Olawunmi,10/31/2024 8:03,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Stephen Payn,10/31/2024 7:58,£13.43,1,USD,USA,£0.00,Card,Paid,1
+Jennifer Higgins,10/31/2024 7:57,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,1
+Adeola Omowunmi,10/31/2024 7:56,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Fatemeh Mohamadpoor,10/31/2024 7:51,$61.80 ,2,AUD,Australia,$0.00 ,Card,Paid,1
+Tory Montalvo,10/31/2024 7:46,$15.00 ,1,USD,USA,$0.00 ,Card,Paid,1
+Mel Hargrave,10/31/2024 7:42,£228.15,3,USD,USA,£0.00,Card,Paid,1
+Dan Dan,10/31/2024 7:41,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Jamila E,10/31/2024 7:40,£50.00,2,USD,USA,£0.00,Card,Paid,1
+Reign Ryan,10/31/2024 7:34,$143.10 ,1,AUD,Australia,$0.00 ,Card,Paid,1
+Atakan Kartal,10/31/2024 7:32,£20.00,1,GBP,UK,£0.00,Card,Paid,1
+Nita Melissa,10/31/2024 7:27,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,1
+Dorothy Scally,10/31/2024 7:21,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,1
+Mose Adan,10/31/2024 7:17,£30.00,2,USD,USA,£0.00,Card,Paid,1
+Amber Bergren,10/31/2024 7:06,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,1
+Sam Hughes,10/31/2024 6:58,£50.00,2,USD,USA,£0.00,Card,Paid,1
+Alexander Griffin,10/31/2024 6:48,£15.00,1,USD,USA,£0.00,Card,Paid,0
+Philip Spicer,10/31/2024 6:45,£155.00,1,USD,USA,£0.00,Card,Paid,0
+Kelechi Ubi,10/31/2024 6:39,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+William Russell,10/31/2024 6:32,£20.00,2,USD,USA,£0.00,Card,Paid,0
+Karen Kadach,10/31/2024 6:22,$30.60 ,1,USD,USA,$0.00 ,Card,Paid,0
+Anneka He,10/31/2024 6:21,£25.00,1,USD,USA,£0.00,Card,Paid,0
+Olu Tola,10/31/2024 6:21,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Emmanuel Adebisi,10/31/2024 6:17,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Michael Adekola,10/31/2024 6:14,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jeremy Mead,10/31/2024 6:08,$60.00 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Raffaele Crispino,10/31/2024 6:06,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,0
+Oluwakayode Mustapha,10/31/2024 6:06,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Clare Murray,10/31/2024 6:03,£70.00,1,USD,USA,£0.00,Card,Paid,0
+Will Underwood,10/31/2024 5:56,£8.00,1,USD,USA,£0.00,Card,Paid,0
+Halenur Dogan,10/31/2024 5:54,£20.00,1,GBP,UK,£0.00,Card,Paid,0
+Hattie Hansard,10/31/2024 5:54,£75.00,5,USD,USA,£0.00,Card,Paid,0
+Anna Jablonska,10/31/2024 5:45,£10.00,1,USD,USA,£0.00,Card,Paid,0
+Thomas Woodman,10/31/2024 5:36,£30.00,2,USD,USA,£0.00,Card,Paid,0
+Eranda Kock,10/31/2024 5:36,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,0
+Michele Haunschild,10/31/2024 5:34,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jody Nielsen,10/31/2024 5:32,$30.00 ,2,USD,USA,$0.00 ,Card,Paid,0
+Esther Toke,10/31/2024 5:21,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Fauziyyat Bello,10/31/2024 5:21,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Ronel Botha,10/31/2024 5:13,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,0
+Adegoke Gideon,10/31/2024 5:12,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Abdulwadood Salaudeen,10/31/2024 5:10,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Emily Raby,10/31/2024 4:59,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,0
+Jan Botha,10/31/2024 4:58,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Bjorn Woldbeck,10/31/2024 4:57,$29.59 ,1,USD,USA,$0.00 ,Card,Paid,0
+Oluwafemi Aliu,10/31/2024 4:53,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Daria Oslo,10/31/2024 4:52,lei0.00,6,AUD,Australia,lei0.00,Cash,Paid,0
+Amoo Bidemi,10/31/2024 4:43,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Brian Bollinger,10/31/2024 4:35,$50.00 ,2,USD,USA,$0.00 ,Card,Paid,0
+Colin Kneller,10/31/2024 4:35,£36.00,2,USD,USA,£0.00,Card,Paid,0
+Manuel Roman,10/31/2024 4:34,$121.80 ,2,USD,USA,$0.00 ,Card,Paid,0
+Erik Gidney,10/31/2024 4:26,$15.45 ,1,USD,USA,$0.00 ,Card,Paid,0
+Christian Erling,10/31/2024 4:24,€ 15.00,1,USD,USA,€ 0.00,Card,Paid,0
+Dana Maresca,10/31/2024 4:15,€ 4.50,1,USD,USA,€ 0.00,Card,Paid,0
+Javier Arboledas,10/31/2024 4:04,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Amos Adeniyi,10/31/2024 3:57,$0.00 ,3,AUD,Australia,$0.00 ,Cash,Paid,0
+Luis Diaz,10/31/2024 3:56,$30.00 ,2,USD,USA,$0.00 ,Card,Paid,0
+Benjamin Praise,10/31/2024 3:52,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jesse Vasquez,10/31/2024 3:39,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Ramón Ortega,10/31/2024 3:28,€ 0.00,2,AUD,Australia,€ 0.00,Cash,Paid,0
+Israel Vasquez,10/31/2024 3:27,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Helena Dyck,10/31/2024 3:23,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+George Dyck,10/31/2024 3:19,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Issie Deady-Pearce,10/31/2024 3:18,£8.00,1,USD,USA,£0.00,Card,Paid,0
+Daniel Schrant,10/31/2024 3:06,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Maxwell Adewumi,10/31/2024 3:05,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Luigi Menna,10/31/2024 3:02,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,0
+Danija Rozenberga,10/31/2024 3:02,$10.00 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Moyo Adeyeye,10/31/2024 2:56,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Stephen KOLAWOLE,10/31/2024 2:54,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Albin Alias,10/31/2024 2:50,$4.00 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Oyinloluwa Michael,10/31/2024 2:50,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jackson Wooten,10/31/2024 2:31,£15.00,1,USD,USA,£0.00,Card,Paid,0
+Serafina Soehianto,10/31/2024 2:31,£18.00,1,USD,USA,£0.00,Card,Paid,0
+Ayodeji Kayode,10/31/2024 2:24,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Isabel Roldan,10/31/2024 2:20,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Frank Ventura,10/31/2024 2:06,$60.90 ,1,USD,USA,$0.00 ,Card,Paid,0
+Robert Crookes,10/31/2024 2:02,£30.00,3,USD,USA,£0.00,Card,Paid,0
+Sara Iannotti,10/31/2024 1:56,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,0
+Maria Teresa Monfrecola,10/31/2024 1:53,€ 4.50,1,USD,USA,€ 0.00,Card,Paid,0
+Bamidele Samuel,10/31/2024 1:46,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Helen Goddard,10/31/2024 1:40,£0.00,2,AUD,Australia,£0.00,Cash,Paid,0
+Fabrizia Mattei,10/31/2024 1:37,€ 4.50,1,USD,USA,€ 0.00,Card,Paid,0
+Michael Watts,10/31/2024 1:35,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Anna-Karin Jones,10/31/2024 1:34,£30.00,2,USD,USA,£0.00,Card,Paid,0
+Michael Jones,10/31/2024 1:32,£15.00,1,USD,USA,£0.00,Card,Paid,0
+Adeola Omolara,10/31/2024 1:31,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Aduragbemi Grace,10/31/2024 1:31,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Musuruca Giorgio,10/31/2024 1:30,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Inmaculada Galindo,10/31/2024 1:28,€ 0.00,2,AUD,Australia,€ 0.00,Cash,Paid,0
+Dawud Tieb Fernández,10/31/2024 1:22,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Rahil Alhaj kassem Alakhras,10/31/2024 1:22,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Christopher Joy,10/31/2024 1:15,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Olarenwaju Afeez,10/31/2024 1:14,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Noura Moreno El Hadri,10/31/2024 1:13,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Alicia Herrera,10/31/2024 1:11,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Michael Bright,10/31/2024 1:11,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Theodore Arnold-Moore,10/31/2024 1:10,$10.00 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Adelaja Funsho,10/31/2024 1:00,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Ailincai Emira,10/31/2024 0:59,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Constantina Christoforou,10/31/2024 0:44,£35.00,1,USD,USA,£0.00,Card,Paid,0
+Michael Watt,10/31/2024 0:43,$0.00 ,2,AUD,Australia,$0.00 ,Cash,Paid,0
+Thomas Hurley,10/31/2024 0:40,£8.00,1,USD,USA,£0.00,Card,Paid,0
+Natalia Kurzecki,10/31/2024 0:40,$62.40 ,4,AUD,Australia,$0.00 ,Card,Paid,0
+Fragile to Agile Reserved,10/31/2024 0:39,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Dijvar Bekem,10/31/2024 0:39,£60.00,2,GBP,UK,£0.00,Card,Paid,0
+Aurora Aponte,10/31/2024 0:37,€ 9.00,2,USD,USA,€ 0.00,Card,Paid,0
+Hanna Richardson,10/31/2024 0:35,$59.18 ,2,USD,USA,$0.00 ,Card,Paid,0
+Amaka Faustina,10/31/2024 0:33,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Philippa Millington,10/31/2024 0:25,£35.00,1,USD,USA,£0.00,Card,Paid,0
+Iasmina Paduraru,10/31/2024 0:22,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Robert Dellinger,10/31/2024 0:21,$101.30 ,1,USD,USA,$0.00 ,Card,Paid,0
+ACS Reserved,10/31/2024 0:20,$0.00 ,9,AUD,Australia,$0.00 ,Cash,Paid,0
+Dankenz Ayo,10/31/2024 0:13,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Corey Woods,10/31/2024 0:13,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Olaoluwa Olayanju,10/31/2024 0:08,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Sue Robson,10/31/2024 0:07,$66.60 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Katrina Kettley,10/31/2024 0:02,$66.60 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Sarah Butler,10/31/2024 0:02,$365.76 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Harry Johnson,10/30/2024 23:58,$0.00 ,1,AUD,Australia,$26.00 ,Cash,Paid,0
+jack clemson,10/30/2024 23:55,$148.20 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Israel Adegoke,10/30/2024 23:55,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Rebecca Ellis,10/30/2024 23:53,$41.40 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Victoria Benson,10/30/2024 23:51,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Nataliia Vinnytska,10/30/2024 23:49,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Mayur Narsey,10/30/2024 23:49,$30.00 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Miguel Ramos,10/30/2024 23:37,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Elizabeth Asigau,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Daera Rarua,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Moale Tau,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Karen Kirewo,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Roberta Morlin,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Christine Waram,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Gizella Waram,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Kemi Waram,10/30/2024 23:36,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Sarah Murray,10/30/2024 23:35,£96.56,2,USD,USA,£0.00,Card,Paid,0
+Knowledge Chirangaza,10/30/2024 23:27,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Halima Habil,10/30/2024 23:18,£15.00,1,USD,USA,£0.00,Card,Paid,0
+Ashrin Chand,10/30/2024 23:14,$28.00 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Nikala Kundevski,10/30/2024 23:13,$450.00 ,4,AUD,Australia,$0.00 ,Card,Paid,0
+Aidan Mong,10/30/2024 23:09,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Matei Ancuta,10/30/2024 23:09,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Lateefah Oshunsanya,10/30/2024 23:09,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Julie Cardrick,10/30/2024 23:07,£20.80,2,USD,USA,£0.00,Card,Paid,0
+Esther Olajumoke,10/30/2024 22:51,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Lina Leaufagatele,10/30/2024 22:48,$0.00 ,3,AUD,Australia,$0.00 ,Cash,Paid,0
+Lydia Atmadji,10/30/2024 22:41,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Tiana Gleeson,10/30/2024 22:38,$60.00 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Ashleigh Waldron,10/30/2024 22:36,$148.20 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+Micu Denis-Gabriel,10/30/2024 22:35,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Tatiana Ortegon,10/30/2024 22:29,€ 0.00,3,AUD,Australia,€ 0.00,Cash,Paid,0
+Ronnie Teague,10/30/2024 22:24,£10.00,1,USD,USA,£0.00,Card,Paid,0
+Alayo  Esther ,10/30/2024 22:24,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Javier García Arias,10/30/2024 22:21,€ 0.00,1,AUD,Australia,€ 0.00,Cash,Paid,0
+Esther Oyewole,10/30/2024 22:18,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jose  Oluwakunmi,10/30/2024 22:17,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Isadora Jarosek,10/30/2024 22:16,$15.60 ,1,AUD,Australia,$0.00 ,Card,Paid,0
+dhriti Hajrat,10/30/2024 22:15,$0.00 ,5,AUD,Australia,$0.00 ,Cash,Paid,0
+Israel Toluwalope Olaleye,10/30/2024 22:05,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+yogita rathod,10/30/2024 22:05,$0.00 ,5,AUD,Australia,$0.00 ,Cash,Paid,0
+Oladeji Adegbola,10/30/2024 22:02,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Dăscalița Steluța,10/30/2024 22:02,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Katie Towns,10/30/2024 22:00,$80.00 ,2,AUD,Australia,$0.00 ,Card,Paid,0
+Șerban Ștefan,10/30/2024 21:57,lei0.00,1,AUD,Australia,lei0.00,Cash,Paid,0
+Darius Sofronia,10/30/2024 21:54,lei0.00,4,AUD,Australia,lei0.00,Cash,Paid,0
+Olaniregun Blessing,10/30/2024 21:52,$0.00 ,1,AUD,Australia,$0.00 ,Cash,Paid,0
+Jayde Stretton,10/30/2024 21:50,$286.20 ,2,AUD,Australia,$0.00 ,Card,Paid,0

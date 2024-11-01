@@ -1,14 +1,12 @@
-from flask import Flask, Response, request
-from sklearn.ensemble import HistGradientBoostingClassifier
+from flask import Response, render_template
+from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 
-from .errors import errors
 from .handlers import predict as predict_handler
 
 import json
-import os
 import time
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import List
 
 import joblib
 import numpy as np
@@ -16,12 +14,12 @@ import pandas as pd
 from flask import Flask, request, jsonify
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, roc_auc_score
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, FunctionTransformer
-from services.price_cleaner import PriceCleaner
+from services import PriceTransformer
+import re
 
 app = Flask(__name__)
 # app.register_blueprint(errors)
@@ -37,7 +35,18 @@ NUMERIC_FEATURES: List[str] = [
     "Coupon amount",
 ]
 
-CATEGORICAL_FEATURES: List[str] = ["sex", "cp", "restecg", "ca", "slope", "thal"]
+PRICE_FEATURES: List[str] = [
+    "Amount (Total Price)",
+    "Coupon amount",
+]
+
+CATEGORICAL_FEATURES: List[str] = [
+    "Customer Name",
+    "Currency",
+    "Country",
+    "Booking type",
+    "Payment"
+]
 
 # Additional date features
 DATE_FEATURES: List[str] = [
@@ -45,22 +54,31 @@ DATE_FEATURES: List[str] = [
     "month",
     "day",
     "hour",
-    "day_of_week",
+    "minute"
 ]
 
 # Custom transformer to extract datetime features
-def extract_datetime_features(data_set):
-    data_set = data_set.copy()
-    data_set["order_date_time"] = pd.to_datetime(data_set["order_date_time"])
-    data_set["year"] = data_set["order_date_time"].dt.year
-    data_set["month"] = data_set["order_date_time"].dt.month
-    data_set["day"] = data_set["order_date_time"].dt.day
-    data_set["hour"] = data_set["order_date_time"].dt.hour
-    data_set["minute"] = data_set["order_date_time"].dt.minute
-    return data_set.drop(columns=["order_date_time"])
+def extract_datetime_features(data_frame):
+    data_frame["Date & Time"] = pd.to_datetime(data_frame["Date & Time"])
+    data_frame["year"] = data_frame["Date & Time"].dt.year
+    data_frame["month"] = data_frame["Date & Time"].dt.month
+    data_frame["day"] = data_frame["Date & Time"].dt.day
+    data_frame["hour"] = data_frame["Date & Time"].dt.hour
+    data_frame["minute"] = data_frame["Date & Time"].dt.minute
+    return data_frame.drop(columns=["Date & Time"])
+
+
+def extract_datetime_data_json(data):
+    data_and_time = pd.to_datetime(data["Date & Time"])
+    data["year"] = data_and_time.dt.year
+    data["month"] = data_and_time.dt.month
+    data["day"] = data_and_time.dt.day
+    data["hour"] = data_and_time.dt.hour
+    data["minute"] = data_and_time.dt.minute
+    return data
 
 # Create the pipeline function
-def create_pipeline(categorical_features: List[str], numeric_features: List[str]) -> Pipeline:
+def create_pipeline(categorical_features: List[str], numeric_features: List[str]):
 
     # Use StandardScaler for numeric features if scaling is desired (not strictly necessary for tree-based models)
     numeric_transformer = Pipeline(
@@ -69,27 +87,27 @@ def create_pipeline(categorical_features: List[str], numeric_features: List[str]
 
     # One-hot encode categorical features
     categorical_transformer = Pipeline(
-        steps=[("imputer", SimpleImputer(strategy="constant")), ("onehot", OneHotEncoder(handle_unknown="ignore"))]
+        steps=[("imputer", SimpleImputer(strategy="constant")), ("onehot", OneHotEncoder(sparse_output=False, handle_unknown="ignore"))]
     )
 
-    # Preprocess datetime features
-    datetime_transformer = FunctionTransformer(extract_datetime_features, validate=False)
-
-    # Create the price cleaner
-    price_cleaner = PriceCleaner()
+    # # Preprocess datetime features
+    # datetime_transformer = FunctionTransformer(extract_datetime_features, validate=False)
+    #
+    # # Preprocess the price data
+    # price_transformer = PriceTransformer()
 
     # Combine the transformations for price, datetime, numeric, and categorical data
     preprocessor = ColumnTransformer(
         transformers=[
-            ("price", price_cleaner, ["price"]),
-            ("datetime", datetime_transformer, ["order_date_time"]),
+            # ("price", price_transformer, PRICE_FEATURES),
+            # ("datetime", datetime_transformer, DATE_FEATURES),
             ("num", numeric_transformer, numeric_features),
             ("cat", categorical_transformer, categorical_features),
         ]
     )
 
     # Use HistGradientBoostingClassifier
-    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", HistGradientBoostingClassifier())])
+    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", HistGradientBoostingClassifier(random_state=42))])
 
 
 
@@ -134,10 +152,17 @@ def train():
     print(f"read_csv path {path}")
     data_frame = pd.read_csv(path)
 
-    # Clean the 'price' column
-    data_frame["price"] = data_frame["price"].str.replace(r'[^0-9.]', '', regex=True) # Remove any character except numeric values and decimal points
-    # Convert to numeric type
-    data_frame["price"] = pd.to_numeric(data_frame["price"])
+    # Clean the price data directly
+    data_frame['Amount (Total Price)'] = data_frame['Amount (Total Price)'].apply(
+        lambda x: float(re.sub(r'[^\d.]', '', x.strip())) if isinstance(x, str) else x
+    )
+
+   # Clean the price data directly
+    data_frame['Coupon amount'] = data_frame['Coupon amount'].apply(
+        lambda x: float(re.sub(r'[^\d.]', '', x.strip())) if isinstance(x, str) else x
+    )
+
+    data_frame = extract_datetime_features(data_frame)
 
     features = data_frame[categorical_features + numeric_features]
     target = data_frame[label]
@@ -147,11 +172,21 @@ def train():
     # vx: The test/validation set for the input features.
     # ty: The training set for the target (label).
     # vy: The test/validation set for the target (label).
-    tx, vx, ty, vy = train_test_split(features, target, test_size=test_size)
+    tx, vx, ty, vy = train_test_split(features, target, test_size=test_size, random_state=42)
+
+    # Assuming X is a sparse matrix
 
     # Create model and train
 
     # model the pipeline object
+
+    # price_transformer = PriceTransformer()
+    # tx  = price_transformer.transform(data_frame)
+    # print("price transformed_data")
+    # print(tx)
+    # print(tx.dtypes)  # Check the data types of the columns
+    # print(tx.isnull().sum())  # Check for NaN values in the transformed data
+
     model = create_pipeline(categorical_features=categorical_features, numeric_features=numeric_features)
     model.fit(tx, ty)
 
@@ -196,3 +231,8 @@ def predict():
 @app.route("/health")
 def health():
     return Response("OK", status=200)
+
+
+@app.route("/", methods=['GET'])
+def index():
+    return render_template("index.html")
