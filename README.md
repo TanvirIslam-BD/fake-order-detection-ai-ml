@@ -1,15 +1,7 @@
 # Fake order prediction using Machine Learning
 
-This [template repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template)
- provides a minimal configuration for a 'production-ready' Flask API Scikit-Learn
-project. It includes a basic project structure and 'seed' files for functional and 
-non-function testing, a basic application structure (including error-handling 
-blueprint), and a few assorted 'getting started' files too.
-
-The template has been set up for use with Python >= 3.7 and [Docker](https://www.docker.com/). 
 
 ## Running locally
-
 To run the basic server, you'll need to install a few requirements. To do this, run:
 
 ```bash
