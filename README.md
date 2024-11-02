@@ -10,15 +10,6 @@ pip install -r requirements/common.txt
 
 This will install only the dependencies required to run the server. 
 
-### Creating a model
-
-Before deploying a model, you'll first need to train a model. There's a demo pipeline
-setup in this project. To train the model, run:
-
-```bash
-python steps/train.py --path=data/heart-disease.csv 
-```
-
 This'll produce a couple of files in the `/data` directory, including a pickled 
 `Pipeline` object. Now you can deploy this pipeline as an API!
 
@@ -64,28 +55,7 @@ You should see a response looking something like:
 }
 ```
 
-And that's it, you have a model wrapped in a web API!
-
-## Running with `docker`
-
-Unsurprisingly, you'll need [Docker](https://www.docker.com/products/docker-desktop) 
-installed to run this project with Docker. To build a containerised version of the API, 
-run:
-
-```bash
-docker build . -t flask-app
-```
-
-To launch the containerised app, run:
-
-```bash
-docker run -p 8080:8080 flask-app
-```
-
-You should see your server boot up, and should be accessible as before!
-
-With that done, you've got a containerised ML web API ready to go.
-
+And that's it, you have a model wrapped in a web app!
 ## Developing with the template
 
 To develop the template for your own project, you'll need to make sure to [create your
