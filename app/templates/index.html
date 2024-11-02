@@ -4,238 +4,351 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
 <style>
-    .upload-icon {
-    font-size: 30px; /* Adjust size as needed */
-    vertical-align: middle; /* Aligns with text */
-    margin-right: 10px; /* Space between icon and text */
-}
 
-   .file-upload {
-    margin: 20px 0;
-}
+    .section-summary-info {
+        display: flex;
+    }
 
-.file-upload-label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.model-hyperparameters {
-    display: flex;
-}
-
-.model-hyperparameters .form-group {
-    margin-right: 10px;
-}
-
-.custom-file-upload {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    border: 1px dashed #6c757d;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.custom-file-upload:hover {
-    border-color: #212529;
-    background-color: #f1f1f1;
-}
-
-.custom-file-upload input[type="file"] {
-    display: none;
-}
-
-.upload-icon {
-    font-size: 30px;
-}
-
-.upload-text {
-    margin-left: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-.file-upload-info {
-    font-size: 12px;
-    color: #888;
-}
-
-.summary {
-    margin-top: 20px;
-}
-
-.summary table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.summary th, .summary td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    font-size: 12px;
-}
-
-.summary th {
-    background-color: #6c757d;
-    color: white;
-    font-size: 11px;
-}
-
-.select-features-wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-.select2-container {
-    width: auto !important;
-}
-
-   h1 {
-            font-family: 'Arial', sans-serif;
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        .multi-select {
-            height: 150px;
-            overflow-y: auto;
-            border: 1px solid #ced4da;
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
-
-          /* Loader styling */
-      .loader {
-        display: none;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 9999;
-        text-align: center;
-        background: #adadad8a;
-        height: 100%;
+    .section-summary-info div {
+        margin-right: 20px;
         width: 100%;
-        justify-content: center;
-        padding-top: 40%;
-     }
+    }
 
-        .loader .spinner {
-            width: 50px;
-            height: 50px;
-            border: 8px solid #f3f3f3; /* Light grey */
-            border-top: 8px solid #3498db; /* Blue */
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
+    .upload-icon {
+        font-size: 30px; /* Adjust size as needed */
+        vertical-align: middle; /* Aligns with text */
+        margin-right: 10px; /* Space between icon and text */
+    }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+    .file-upload {
+        margin: 20px 0;
+    }
 
-        .loader p {
-            margin-top: 15px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
+    .file-upload-label {
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .model-hyperparameters {
+        display: flex;
+    }
+
+    .model-hyperparameters .form-group {
+        margin-right: 10px;
+    }
+
+    .custom-file-upload {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        border: 1px dashed #6c757d;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .custom-file-upload:hover {
+        border-color: #212529;
+        background-color: #f1f1f1;
+    }
+
+    .custom-file-upload input[type="file"] {
+        display: none;
+    }
+
+    .upload-icon {
+        font-size: 30px;
+    }
+
+    .upload-text {
+        margin-left: 10px;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .file-upload-info {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .summary {
+        margin-top: 20px;
+    }
+
+    .summary table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .summary th, .summary td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: 12px;
+    }
+
+    .summary th {
+        background-color: #6c757d;
+        color: white;
+        font-size: 11px;
+    }
+
+
+    h1, h2, h3 {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .multi-select {
+        height: 150px;
+        overflow-y: auto;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    /* Loader styling */
+    .loader {
+        display: none; /* Changed from none to flex for initial testing */
+        align-items: center; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        position: fixed; /* Fixed position for full screen overlay */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 9999;
+        background: rgba(173, 173, 173, 0.8); /* Semi-transparent background */
+        text-align: center;
+    }
+
+    .loader .spinner {
+        width: 50px;
+        height: 50px;
+        border: 8px solid #f3f3f3; /* Light grey */
+        border-top: 8px solid #3498db; /* Blue */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
         }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .loader p {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+    }
+
+
+    .select2-container--default .select2-selection--multiple {
+        background-color: #fafafa;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        padding: 6px;
+        font-size: 16px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling each selected option tag */
+    .select2-container--default .select2-selection__choice {
+        background-color: #4f46e5; /* Modern blue color */
+        color: #212529; /* White text */
+        border-radius: 16px; /* Rounded pill shape */
+        padding: 5px 12px;
+        margin: 4px 4px 0 0;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+    }
+
+    /* Styling for the remove 'x' icon inside the tag */
+    .select2-container--default .select2-selection__choice__remove {
+        color: #ffffff;
+        font-weight: bold;
+        margin-right: 6px;
+        cursor: pointer;
+        transition: color 0.3s;
+    }
+
+    .select2-container--default .select2-selection__choice__remove:hover {
+        color: #ff8a80;
+    }
+
+
+    .select2-container--default .select2-selection--multiple .select2-selection__placeholder {
+        color: #9ca3af;
+    }
+
+
+    .select2-container--default .select2-results__option {
+        padding: 10px;
+        font-size: 15px;
+        color: #333;
+        background-color: #fff;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+
+    .select2-container--default .select2-results__option--highlighted {
+        background-color: #4f46e5;
+        color: #fff;
+        font-weight: 600;
+    }
+
+
+    .select2-container--default .select2-selection--multiple:hover {
+        border-color: #6366f1;
+        background-color: #f9fafb;
+    }
+
+    .separator-decorative {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 20px 0;
+        color: #666;
+    }
+
+    .separator-decorative::before,
+    .separator-decorative::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #ddd; /* Line on each side */
+    }
+
+    .separator-decorative:not(:empty)::before {
+        margin-right: .75em;
+    }
+
+    .separator-decorative:not(:empty)::after {
+        margin-left: .75em;
+    }
+
+    .section-summary-info {
+        margin-top: 20px;
+    }
 
 </style>
 
+</head>
+<body>
 {% extends 'layout.html' %}
 
 {% block content %}
- <div class="container-wrapper">
-     <h1 style="text-align: center"> EB Order Classification Model</h1>
-<form id="trainForm" method="post" action="/train-action" enctype="multipart/form-data">
+<div class="container-wrapper">
+    <h1 style="text-align: center"> EB Order Classification Model</h1>
+    <form id="trainForm" method="post" action="/train-action" enctype="multipart/form-data">
 
 
-     <div class="form-group file-upload">
-        <label for="file" class="file-upload-label">Upload Dataset (CSV)</label>
-        <div class="custom-file-upload" onclick="document.getElementById('file').click();">
-            <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
-            <span class="upload-icon"><i class="fas fa-file-csv"></i></span>
-            <span class="upload-text">Choose a file</span>
+        <div class="form-group file-upload">
+            <label for="file" class="file-upload-label">Upload Dataset (CSV)</label>
+            <div class="custom-file-upload" onclick="document.getElementById('file').click();">
+                <input type="file" class="form-control" id="file" name="file" accept=".csv" required>
+                <span class="upload-icon"><i class="fas fa-file-csv"></i></span>
+                <span class="upload-text">Choose a file</span>
+            </div>
+            <p class="file-upload-info">Please upload a CSV file only.</p>
         </div>
-        <p class="file-upload-info">Please upload a CSV file only.</p>
-    </div>
 
-    <!-- Summary Section -->
-    <div id="summary" class="summary"></div>
-
-    <!-- Label Column Selection -->
-    <div class="form-group mt-2" id="label-column-selection" style="display: none;">
-        <label for="labelColumn">Select Label Column:</label>
-        <select name="labelColumn" id="labelColumn" class="form-control"></select>
-    </div>
-
-   <div class="hidden-to-show" style="display: none;">
-        <h5 class="mt-2">Select Features</h5>
-        <div class="select-features-wrapper">
-             <div class="mt-2">
-               <label for="Date Fields">Categorical Fields</label>
-                <select id="categoricalFields" class="form-control multi-select select2" multiple></select>
-            </div>
-            <div class="mt-2">
-                <label for="Date Fields">Date Fields</label>
-               <select id="dateFields" class="form-control multi-select select2" multiple></select>
-            </div>
-            <div class="mt-2">
-              <label for="Date Fields">Numeric Fields</label>
-              <select id="numericFields" class="form-control multi-select select2" multiple></select>
-            </div>
+        <!-- Summary Section -->
+        <div class="section-summary">
+            <div id="head" class="summary"></div>
+                <div class="section-summary-info">
+                    <div id="info" class="info"></div>
+                    <div id="missing_values" class="missing_values"></div>
+                    <div id="unique_values" class="unique_values"></div>
+                </div>
         </div>
-    </div>
 
+            <div class="separator-decorative">
+                <span>Select Label & Feature(s) column</span>
+            </div>
+        <!-- Label Column Selection -->
+        <div class="form-group mt-2" id="label-column-selection" style="display: none;">
+            <label for="labelColumn">Label Column:</label>
+            <select name="labelColumn" id="labelColumn" class="form-control"></select>
+        </div>
 
-    <div class="hidden-to-show" style="display: none;">
-          <!-- Model Hyperparameters -->
-         <h5 class="mt-2">Model Hyperparameters</h5>
-        <div class="model-hyperparameters">
-            <div class="form-group">
-                <label for="learning_rate">Learning Rate</label>
-                <input type="number" step="0.01" class="form-control" id="learning_rate" name="learning_rate" value="0.05">
-            </div>
-            <div class="form-group">
-                <label for="max_iter">Maximum Iterations</label>
-                <input type="number" class="form-control" id="max_iter" name="max_iter" value="200">
-            </div>
-            <div class="form-group">
-                <label for="max_leaf_nodes">Max Leaf Nodes</label>
-                <input type="number" class="form-control" id="max_leaf_nodes" name="max_leaf_nodes" value="40">
-            </div>
-            <div class="form-group">
-                <label for="min_samples_leaf">Minimum Samples per Leaf</label>
-                <input type="number" class="form-control" id="min_samples_leaf" name="min_samples_leaf" value="10">
+        <div class="hidden-to-show" style="display: none;">
+            <h5 class="mt-2">Features</h5>
+            <div class="select-features-wrapper">
+                <div class="mt-2">
+                    <label for="Date Fields">Categorical Fields</label>
+                    <select name="categoricalFields" id="categoricalFields" class="form-control multi-select select2" multiple></select>
+                </div>
+                <div class="mt-2">
+                    <label for="Date Fields">Date Fields</label>
+                    <select name="dateFields" id="dateFields" class="form-control multi-select select2" multiple></select>
+                </div>
+                <div class="mt-2">
+                    <label for="Date Fields">Numeric Fields</label>
+                    <select name="numericFields" id="numericFields" class="form-control multi-select select2" multiple></select>
+                </div>
             </div>
         </div>
+
+
+        <div class="hidden-to-show mt-4" style="display: none;">
+            <!-- Model Hyperparameters -->
+            <h5 class="mt-2">Model Hyperparameters</h5>
+            <div class="model-hyperparameters">
+                <div class="form-group">
+                    <label for="learning_rate">Learning Rate</label>
+                    <input type="number" step="0.01" class="form-control" id="learning_rate" name="learning_rate"
+                           value="0.05">
+                </div>
+                <div class="form-group">
+                    <label for="max_iter">Maximum Iterations</label>
+                    <input type="number" class="form-control" id="max_iter" name="max_iter" value="200">
+                </div>
+                <div class="form-group">
+                    <label for="max_leaf_nodes">Max Leaf Nodes</label>
+                    <input type="number" class="form-control" id="max_leaf_nodes" name="max_leaf_nodes" value="40">
+                </div>
+                <div class="form-group">
+                    <label for="min_samples_leaf">Minimum Samples per Leaf</label>
+                    <input type="number" class="form-control" id="min_samples_leaf" name="min_samples_leaf" value="10">
+                </div>
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary mt-4"><i class="fas fa-play"></i>Train Model</button>
+
+    </form>
+
+    <div class="loader">
+        <div class="spinner"></div>
     </div>
-
-
-
-    <button type="submit" class="btn btn-primary mt-4"><i class="fas fa-play"></i>Train Model</button>
-
-</form>
-
-<!-- Modern Loader HTML -->
-<div class="loader">
-    <div class="spinner"></div>
-    <p>Training model, please wait...</p>
 </div>
- </div>
 
 <script>
 
@@ -249,15 +362,15 @@
     // Handle form submission to show loader
     $('#trainForm').on('submit', function(event) {
         // event.preventDefault(); // Prevent default form submission
-        $('.loader').show(); // Show loader
+        $('.loader').css("display", "flex"); // Show loader
 
         // Simulate model training process
-        setTimeout(() => {
-            // Replace this with your actual training function
-            // Example: submit the form or make an AJAX request here
-
-            $('.loader').hide(); // Hide loader after training (or on success)
-        }, 3000); // Simulate 3 seconds for training (adjust as needed)
+        // setTimeout(() => {
+        //     // Replace this with your actual training function
+        //     // Example: submit the form or make an AJAX request here
+        //
+        //     $('.loader').hide(); // Hide loader after training (or on success)
+        // }, 3000); // Simulate 3 seconds for training (adjust as needed)
 
         // Optionally, make an AJAX request here
         // $.ajax({
@@ -294,9 +407,9 @@
                 // }
             });
              // Refresh Select2 to show new options
-            categoricalSelect.trigger('change');
-            dateSelect.trigger('change');
-            numericSelect.trigger('change');
+            $(categoricalSelect).trigger('change');
+            $(dateSelect).trigger('change');
+            $(numericSelect).trigger('change');
 
         }
 
@@ -306,21 +419,41 @@
     document.querySelector('.upload-text').textContent = fileName;
     });
 
-    document.getElementById('file').addEventListener('change', function(event) {
+
+    document.getElementById('file').addEventListener('change', async function (event) {
         const file = event.target.files[0];
         if (file) {
-            const reader = new FileReader();
 
-            reader.onload = function(e) {
-                const contents = e.target.result;
-                const data = parseCSV(contents);
-                displaySummary(data);
-                populateLabelColumn(data.headers);
-                $(".hidden-to-show").show();
-                populateFields(data.headers);
-            };
+            const formData = new FormData();
+            formData.append('file', file);
 
-            reader.readAsText(file);
+            try {
+                const response = await fetch('/data-set-info', {
+                    method: 'POST',
+                    body: formData
+                });
+                const data = await response.json();
+
+                if (data.error) {
+                    alert(data.error);
+                } else {
+                    document.getElementById('head').innerHTML = `<h5>First Few Rows</h5>${data.head}`;
+                    document.getElementById('info').innerHTML = `<h5>Data Info</h5><pre>${data.info}</pre>`;
+                    document.getElementById('missing_values').innerHTML = `<h5>Missing Values</h5><pre>${JSON.stringify(data.missing_values, null, 2)}</pre>`;
+                    document.getElementById('unique_values').innerHTML = `<h5>Unique Values</h5><pre>${JSON.stringify(data.unique_values, null, 2)}</pre>`;
+
+                    populateLabelColumn(data.column_names);
+                    $(".hidden-to-show").show();
+                    populateFields(data.column_names);
+                    $('.loader').css("display", "none"); // Show loader
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while processing the CSV file.');
+            }
+
+
+
         }
     });
 
@@ -342,7 +475,7 @@
         summaryDiv.innerHTML = ''; // Clear previous summary
 
         // Create summary content
-        const headerHTML = `<h3>Dataset Summary</h3><p>Total Rows: ${data.data.length}</p>`;
+        const headerHTML = `<h5>Dataset Summary</h5><p>Total Rows: ${data.data.length}</p>`;
         let tableHTML = '<table><tr>';
 
         // Create table headers
@@ -356,7 +489,7 @@
         previewRows.forEach(row => {
             tableHTML += '<tr>';
             data.headers.forEach(header => {
-                tableHTML += `<td>${row[header]}</td>`;
+                tableHTML += `<td>${row[header.trim()]}</td>`;
             });
             tableHTML += '</tr>';
         });

@@ -5,6 +5,8 @@ import pandas as pd
 from flask import request, jsonify
 from sklearn.pipeline import Pipeline
 
+from app.constants import MODEL_PATH
+
 
 def extract_datetime_data_json(data):
     if "Date & Time" not in data:
@@ -18,7 +20,7 @@ def extract_datetime_data_json(data):
         data["minute"] = data_and_time.minute
     return data
 
-def predict_handler(request: request, path: str = os.getenv("MODEL_PATH", "data/pipeline.pkl")):
+def predict_handler(request: request, path: str = os.getenv("MODEL_PATH", MODEL_PATH)):
     model: Pipeline = joblib.load(path)
     statuses = {0: "Order not genuine", 1: "Genuine order"}
     request_json = request.get_json()
