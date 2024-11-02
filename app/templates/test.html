@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Test UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        div#input-fields div {
+            width: 94%;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            grid-column: span 2; /* Button spans both columns */
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result-card {
+    display: block;
+    width: 100%;
+    max-width: 400px; /* Limit the card width */
+    margin: 20px auto; /* Center the card */
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    font-family: 'Arial', sans-serif; /* Modern font */
+}
+
+.card-header {
+    border-bottom: 2px solid #4CAF50; /* Green border */
+    padding-bottom: 10px; /* Spacing */
+    margin-bottom: 20px; /* Space between header and content */
+}
+
+.card-title {
+    font-size: 24px; /* Larger font for title */
+    color: #4CAF50; /* Green color for the title */
+    margin: 0; /* Remove default margin */
+}
+
+.card-content {
+    padding: 10px; /* Padding inside the card content */
+}
+
+#result {
+    text-align: center; /* Center the text */
+}
+
+.prediction-title {
+    font-size: 22px; /* Font size for prediction */
+    color: #555; /* Cute modern color */
+    margin: 10px 0; /* Margin around the title */
+}
+
+.prediction-description {
+    font-size: 16px; /* Standard font size for description */
+    color: #666; /* Soft dark gray for description */
+}
+
+.card-footer {
+    padding-top: 10px; /* Space above footer content */
+    text-align: center; /* Center footer content */
+}
+
+#prediction-value {
+    display: inline-block; /* Allow padding and background to surround text */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a code-like appearance */
+    font-size: 16px; /* Font size for readability */
+    background-color: #282c34; /* Dark background like a code editor */
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 5px; /* Slightly rounded corners */
+    border: 1px solid #61dafb; /* Light blue border for contrast */
+    color: #61dafb; /* Light blue text color for the code */
+    overflow-x: auto; /* Add horizontal scroll if needed */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Test Your Model</h1>
+        <form id="test-form">
+            <div id="input-fields" class="grid"></div>
+            <button type="button" id="submit-test">Submit Test</button>
+        </form>
+
+        <div id="result-card" class="result-card" style="display: none">
+            <header class="card-header">
+                <h2 class="card-title">Prediction Result</h2>
+            </header>
+            <main class="card-content">
+                <div id="result">
+                    <h3 class="prediction-title"><span id="prediction-value">{"result":"negative(0)"}</span></h3>
+                    <p class="prediction-description">Based on your input, the model predicts this outcome.</p>
+                </div>
+            </main>
+            <footer class="card-footer">
+
+            </footer>
+        </div>
+
+    </div>
+
+    <script>
+        // Fetch the model features when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/get_model_features')
+                .then(response => response.json())
+                .then(features => {
+                    const inputFields = document.getElementById('input-fields');
+                    features.forEach(feature => {
+                        const row = document.createElement('div');
+                        const label = document.createElement('label');
+                        label.textContent = feature.charAt(0).toUpperCase() + feature.slice(1);
+                        const input = document.createElement('input');
+                        input.type = feature === 'quantity' ? 'number' : 'text';
+                        input.name = feature;
+                        input.required = true;
+                        input.placeholder = `Enter ${feature.charAt(0).toUpperCase() + feature.slice(1)}`;
+
+                        row.appendChild(label);
+                        row.appendChild(input);
+                        inputFields.appendChild(row);
+                    });
+                });
+        });
+
+
+        // Handle form submission
+        document.getElementById('submit-test').addEventListener('click', () => {
+            const form = document.getElementById('test-form');
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            fetch('/api/v1/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+           const resultDiv = document.getElementById('result-card');
+           const predictionValue = document.getElementById('prediction-value');
+                resultDiv.style.display = 'block'; // Show the result card
+                predictionValue.innerHTML = `${result.prediction}`;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -9,8 +9,6 @@ from matplotlib import pyplot as plt
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.inspection import permutation_importance
 
-from .handlers import predict as predict_handler
-
 import json
 import time
 from datetime import datetime
@@ -40,6 +38,7 @@ from sklearn.metrics import (
     roc_auc_score
 )
 
+from .handlers.predict import predict_handler
 from .model import train_model
 
 app = Flask(__name__)
@@ -55,6 +54,15 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 
 TIMESTAMP_FMT = "%m-%d-%Y, %H:%M:%S"
+# Constants
+MODEL_PATH = "data/pipeline.pkl"  # Path to save/load model
+METRICS_PATH = "data/metrics.json"  # Path to save metrics
+# Path to save training history
+TRAIN_HISTORY_PATH = "data/train_history.json"
+
+# Global variable to store the last trained model's feature columns
+last_trained_features = []
+features_file = 'last_trained_features.json'
 
 LABEL: str = "Genuine Order"
 
@@ -138,13 +146,67 @@ def create_pipeline(categorical_features: List[str], numeric_features: List[str]
         ]
     )
 
-    # Use HistGradientBoostingClassifier
-    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", HistGradientBoostingClassifier(
+    model = HistGradientBoostingClassifier(
             learning_rate=learning_rate,
             max_iter=max_iter,
             max_leaf_nodes=max_leaf_nodes,
             min_samples_leaf=min_samples_leaf
-    ))])
+    )
+
+    # Use HistGradientBoostingClassifier
+    return Pipeline(steps=[("preprocessor", preprocessor), ("classifier", model)])
+
+def save_training_history(entry):
+    # Load existing history or initialize new list
+    if os.path.exists(TRAIN_HISTORY_PATH):
+        with open(TRAIN_HISTORY_PATH, "r") as f:
+            history = json.load(f)
+    else:
+        history = []
+
+    # Add new entry to history
+    history.append(entry)
+
+    # Save updated history back to file
+    with open(TRAIN_HISTORY_PATH, "w") as f:
+        json.dump(history, f, indent=4)
+
+def save_features_to_json(features):
+    with open(features_file, 'w') as f:
+        json.dump(features, f)
+
+def load_features_from_json():
+    if os.path.exists(features_file):
+        with open(features_file, 'r') as f:
+            return json.load(f)
+    return []
+
+# Load model if it exists
+def load_model():
+    if os.path.exists(MODEL_PATH):
+        return joblib.load(MODEL_PATH)
+    return None
+
+# Save the model and metrics
+def save_model(model, metrics):
+    joblib.dump(model, MODEL_PATH)
+    with open(METRICS_PATH, "w") as f:
+        json.dump(metrics, f)
+
+
+@app.route("/training-history", methods=["GET"])
+def training_history():
+    return render_template("history.html")
+
+@app.route("/api/training-history", methods=["GET"])
+def get_training_history():
+    if os.path.exists(TRAIN_HISTORY_PATH):
+        with open(TRAIN_HISTORY_PATH, "r") as f:
+            history = json.load(f)
+    else:
+        history = []
+
+    return jsonify(history), 200
 
 # Train route
 @app.route("/api/train", methods=["POST"])
@@ -246,6 +308,10 @@ def predict_api():
 def index():
     return (render_template("index.html"))
 
+@app.route("/test-model-form", methods=['GET'])
+def test_model_form():
+    return (render_template("test.html"))
+
 
 def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf):
     # Load data
@@ -274,14 +340,9 @@ def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes
     X_train, X_test, y_train, y_test = train_test_split(features, y, test_size=0.2, random_state=42)
 
 
-    # Initialize HistGradientBoostingClassifier with provided hyperparameters
-    # model = HistGradientBoostingClassifier(
-    #     learning_rate=learning_rate,
-    #     max_iter=max_iter,
-    #     max_leaf_nodes=max_leaf_nodes,
-    #     min_samples_leaf=min_samples_leaf
-    # )
-    model = create_pipeline(categorical_features=categorical_features, numeric_features=numeric_features,
+    model = load_model()  # Load existing model if present
+
+    model = model or create_pipeline(categorical_features=categorical_features, numeric_features=numeric_features,
                             learning_rate=learning_rate,
                             max_iter=max_iter,
                             max_leaf_nodes=max_leaf_nodes,
@@ -292,6 +353,21 @@ def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes
 
     # Make predictions on the test set
     y_pred = model.predict(X_test)
+
+    # Calculate and store metrics
+    train_accuracy = accuracy_score(y_train, model.predict(X_train)) * 100
+    test_accuracy = accuracy_score(y_test, model.predict(X_test)) * 100
+    roc_auc = roc_auc_score(y_test, model.predict_proba(X_test)[:, -1])
+
+    metrics = {
+        "train_accuracy": train_accuracy,
+        "test_accuracy": test_accuracy,
+        "roc_auc": roc_auc,
+        "timestamp": datetime.now().strftime(TIMESTAMP_FMT)
+    }
+
+    save_model(model, metrics)  # Save the updated model and metrics
+
 
     # Calculate evaluation metrics
     accuracy = accuracy_score(y_test, y_pred)
@@ -347,6 +423,29 @@ def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes
     # Sort the feature importance data by percentage importance in descending order
     feature_importance_data = sorted(feature_importance_data, key=lambda x: x[1], reverse=True)
 
+    # Gather metrics and information for history
+    entry = {
+        "timestamp": datetime.now().strftime(TIMESTAMP_FMT),
+        "accuracy": accuracy,
+        "precision": precision,
+        "recall": recall,
+        "f1_score": f1,
+        "learning_rate": learning_rate,
+        "max_iter": max_iter,
+        "max_leaf_nodes": max_leaf_nodes,
+        "min_samples_leaf": min_samples_leaf,
+        "confusion_matrix": confusion,
+        "roc_auc": roc_auc,
+        "report": report
+    }
+
+    # Save this training session's details to history
+    save_training_history(entry)
+
+    # Save features to JSON file
+    last_trained_features = categorical_features + numeric_features
+    save_features_to_json(last_trained_features)
+
     # Return model and metrics
     return model, accuracy, precision, recall, f1, confusion, report, roc_img, feature_importance_data
 
@@ -369,7 +468,12 @@ def train_action():
         model, accuracy, precision, recall, f1, confusion, report, roc_img, feature_importance_data = train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes,
                                                              min_samples_leaf)
 
-        return render_template('results.html',model=model, accuracy=accuracy, precision=precision, recall=recall,
-                               f1=f1, confusion=confusion, report=report, roc_img=roc_img, feature_importance_data=feature_importance_data)
+        return redirect('/training-history')
 
     return render_template('train.html')
+
+@app.route('/get_model_features', methods=['GET'])
+def get_model_features():
+    features = load_features_from_json()
+    return jsonify(features)
+
