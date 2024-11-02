@@ -1,18 +1,15 @@
 .PHONY: style check-style start install develop test load-test
 style:
 	# apply opinionated styles
-	@black api
-	@isort api
-
-	@black steps
-	@isort steps
+	@black app
+	@isort app
 
 	# tests are production code too!
 	@black tests
 	@isort tests
 
 check-style:
-	@black api --check
+	@black app --check
 	@flake8 orion --count --show-source --statistics --ignore=E203,W503
 
 start:

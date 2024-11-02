@@ -1,4 +1,4 @@
-# Fake order prediction using Machine Learning
+# Genuine/Fake order prediction using Machine Learning
 
 
 ## Running locally
@@ -22,7 +22,7 @@ python steps/train.py --path=data/heart-disease.csv
 This'll produce a couple of files in the `/data` directory, including a pickled 
 `Pipeline` object. Now you can deploy this pipeline as an API!
 
-### Launching the API
+### Launching the APP
 
 To boot up the default server, you can run:
 
@@ -36,20 +36,13 @@ Flask app 'in production'](https://flask.palletsprojects.com/en/1.1.x/deploying/
 The server shipped with Flask is [intended for development
 purposes only](https://flask.palletsprojects.com/en/1.1.x/deploying/#deployment).  
 
-You should now be able to send:
-
-```bash
-curl localhost:5000/health
-```
-
-And receive the response `OK` and status code `200`. 
 
 ### Querying the model
 
 You can now query the model using:
 
 ```bash
-curl --location --request POST '127.0.0.1:5000/predict' \
+curl --location --request POST '127.0.0.1:5000/api/v1/predict' \
 --header 'Content-Type: application/json' \
 -d @data/payload.json
 ```
@@ -58,19 +51,8 @@ Where the payload looks like:
 
 ```json
 {
-    "sex": 0,
-    "cp": 1,
-    "restecg": 0,
-    "ca": 1,
-    "slope": 1,
-    "thal": 2,
-    "age": 57,
-    "trestbps": 130,
-    "chol": 236,
-    "fbs": 0,
-    "thalach": 174,
-    "exang": 0,
-    "oldpeak": 0.0
+  "Amount(Total Price)": 100,
+  "Country": "Australia"
 }
 ```
 
@@ -78,7 +60,7 @@ You should see a response looking something like:
 
 ```json
 {
-    "diagnosis": "heart-disease"
+    "prediction": "Genuine Order"
 }
 ```
 
@@ -114,5 +96,4 @@ and then install the project's development dependencies. You can do this with:
 pip install -r requirements/develop.txt
 ```
 
-This'll install some style formatting and testing tools (including `pytest` and 
-`locust`).
+This'll install some style formatting and testing tools (including `pytest` and`locust`).

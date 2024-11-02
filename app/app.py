@@ -8,25 +8,20 @@ from flask_cors import CORS
 from matplotlib import pyplot as plt
 from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
 from sklearn.inspection import permutation_importance
-
 import json
 import time
 from datetime import datetime
 from typing import List
-
 import joblib
 import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import accuracy_score, roc_auc_score, classification_report, roc_curve, auc
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler, FunctionTransformer
-from services import PriceTransformer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 import re
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 from sklearn.metrics import (
     accuracy_score,
     precision_score,
@@ -35,28 +30,33 @@ from sklearn.metrics import (
     confusion_matrix,
     classification_report,
     roc_curve,
+    auc,
     roc_auc_score
 )
 
 from .handlers.predict import predict_handler
 from .model import train_model
 
+
 app = Flask(__name__)
+
 # cors = CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
 # app.register_blueprint(errors)
 # Constants
+
 np.random.seed(42)
+
+# Constants
 
 # Directory to save uploaded files
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-
-
 TIMESTAMP_FMT = "%m-%d-%Y, %H:%M:%S"
-# Constants
+
 MODEL_PATH = "data/pipeline.pkl"  # Path to save/load model
 METRICS_PATH = "data/metrics.json"  # Path to save metrics
+
 # Path to save training history
 TRAIN_HISTORY_PATH = "data/train_history.json"
 
@@ -114,11 +114,7 @@ def extract_datetime_data_json(data):
     return data
 
 # Create the pipeline function
-def create_pipeline(categorical_features: List[str], numeric_features: List[str],
-                    learning_rate,
-                    max_iter,
-                    max_leaf_nodes,
-                    min_samples_leaf):
+def create_pipeline(categorical_features: List[str], numeric_features: List[str],learning_rate, max_iter, max_leaf_nodes, min_samples_leaf):
 
     # Use StandardScaler for numeric features if scaling is desired (not strictly necessary for tree-based models)
     numeric_transformer = Pipeline(
@@ -130,17 +126,9 @@ def create_pipeline(categorical_features: List[str], numeric_features: List[str]
         steps=[("imputer", SimpleImputer(strategy="constant")), ("onehot", OneHotEncoder(sparse_output=False, handle_unknown="ignore"))]
     )
 
-    # # Preprocess datetime features
-    # datetime_transformer = FunctionTransformer(extract_datetime_features, validate=False)
-    #
-    # # Preprocess the price data
-    # price_transformer = PriceTransformer()
-
     # Combine the transformations for price, datetime, numeric, and categorical data
     preprocessor = ColumnTransformer(
         transformers=[
-            # ("price", price_transformer, PRICE_FEATURES),
-            # ("datetime", datetime_transformer, DATE_FEATURES),
             ("num", numeric_transformer, numeric_features),
             ("cat", categorical_transformer, categorical_features),
         ]
@@ -192,126 +180,6 @@ def save_model(model, metrics):
     joblib.dump(model, MODEL_PATH)
     with open(METRICS_PATH, "w") as f:
         json.dump(metrics, f)
-
-
-@app.route("/training-history", methods=["GET"])
-def training_history():
-    return render_template("history.html")
-
-@app.route("/api/training-history", methods=["GET"])
-def get_training_history():
-    if os.path.exists(TRAIN_HISTORY_PATH):
-        with open(TRAIN_HISTORY_PATH, "r") as f:
-            history = json.load(f)
-    else:
-        history = []
-
-    return jsonify(history), 200
-
-# Train route
-@app.route("/api/train", methods=["POST"])
-def train_api():
-    data = request.json
-    # path = data.get("path")
-    # path = os.getenv("MODEL_PATH", "data/pipeline.pkl"),
-    # model_path = os.getenv("MODEL_PATH", "data/pipeline.pkl"),
-    # metrics_path  = os.getenv("METRICS_PATH", "data/metrics.json"),
-    path = r"data/eb-order-data-final.csv"
-    model_path = r"data/pipeline.pkl"
-    metrics_path = r"data/pmetrics.json"
-    # model_path = data.get("model_path", "data/pipeline.pkl")
-    # metrics_path = data.get("metrics_path", "data/metrics.json")
-    test_size = data.get("test_size", 0.2)
-    dump = data.get("dump", True)
-
-    categorical_features = data.get("categorical_features", CATEGORICAL_FEATURES)
-    numeric_features = data.get("numeric_features", NUMERIC_FEATURES + DATE_FEATURES)
-    label = data.get("label", LABEL)
-
-    start = time.time()
-
-    # Load dataset
-    print(f"read_csv path {path}")
-    data_frame = pd.read_csv(path)
-
-    # Clean the price data directly
-    data_frame['Amount (Total Price)'] = data_frame['Amount (Total Price)'].apply(
-        lambda x: float(re.sub(r'[^\d.]', '', x.strip())) if isinstance(x, str) else x
-    )
-
-   # Clean the price data directly
-    data_frame['Coupon amount'] = data_frame['Coupon amount'].apply(
-        lambda x: float(re.sub(r'[^\d.]', '', x.strip())) if isinstance(x, str) else x
-    )
-
-    data_frame = extract_datetime_features(data_frame)
-
-    features = data_frame[categorical_features + numeric_features]
-    target = data_frame[label]
-
-    # Train test split by scikit-learn
-    # tx: The training set for the input features.
-    # vx: The test/validation set for the input features.
-    # ty: The training set for the target (label).
-    # vy: The test/validation set for the target (label).
-    tx, vx, ty, vy = train_test_split(features, target, test_size=test_size, random_state=42)
-
-    # Assuming X is a sparse matrix
-
-    # Create model and train
-
-    # model the pipeline object
-
-    # price_transformer = PriceTransformer()
-    # tx  = price_transformer.transform(data_frame)
-    # print("price transformed_data")
-    # print(tx)
-    # print(tx.dtypes)  # Check the data types of the columns
-    # print(tx.isnull().sum())  # Check for NaN values in the transformed data
-
-    model = create_pipeline(categorical_features=categorical_features, numeric_features=numeric_features)
-    model.fit(tx, ty)
-
-    end = time.time()
-
-    # Calculate metrics
-
-    #Score on train set
-    train_accuracy = accuracy_score(model.predict(tx), ty) * 100
-
-    # Score on test set
-    test_accuracy = accuracy_score(model.predict(vx), vy) * 100
-
-    #  ROC AUC score on test set
-    roc_auc = roc_auc_score(vy, model.predict_proba(vx)[:, -1])
-
-    metrics = dict(
-        train_accuracy=train_accuracy,
-        test_accuracy=test_accuracy,
-        roc_auc=roc_auc,
-        elapsed_time=end - start,
-        timestamp=datetime.now().strftime(TIMESTAMP_FMT),
-    )
-
-    # Save model and metrics
-    if dump:
-        joblib.dump(model, model_path)
-        json.dump(metrics, open(metrics_path, "w"))
-
-    return jsonify(metrics), 200
-
-@app.route("/api/v1/predict", methods=["POST"])
-def predict_api():
-    return predict_handler(request)
-
-@app.route("/", methods=['GET'])
-def index():
-    return (render_template("index.html"))
-
-@app.route("/test-model-form", methods=['GET'])
-def test_model_form():
-    return (render_template("test.html"))
-
 
 def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf):
     # Load data
@@ -371,8 +239,7 @@ def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes
 
     # Calculate evaluation metrics
     accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred,
-                                average='binary')  # Use 'binary' if binary classification, 'macro' or 'weighted' for multiclass
+    precision = precision_score(y_test, y_pred, average='binary')  # Use 'binary' if binary classification, 'macro' or 'weighted' for multiclass
     recall = recall_score(y_test, y_pred, average='binary')
     f1 = f1_score(y_test, y_pred, average='binary')
 
@@ -449,6 +316,38 @@ def train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes
     # Return model and metrics
     return model, accuracy, precision, recall, f1, confusion, report, roc_img, feature_importance_data
 
+
+@app.route("/api/v1/predict", methods=["POST"])
+def predict_api():
+    return predict_handler(request)
+
+@app.route("/", methods=['GET'])
+def index():
+    return (render_template("index.html"))
+
+@app.route("/test-model-form", methods=['GET'])
+def test_model_form():
+    return (render_template("test.html"))
+
+@app.route('/get_model_features', methods=['GET'])
+def get_model_features():
+    features = load_features_from_json()
+    return jsonify(features)
+
+@app.route("/training-history", methods=["GET"])
+def training_history():
+    return render_template("history.html")
+
+@app.route("/api/training-history", methods=["GET"])
+def get_training_history():
+    if os.path.exists(TRAIN_HISTORY_PATH):
+        with open(TRAIN_HISTORY_PATH, "r") as f:
+            history = json.load(f)
+    else:
+        history = []
+
+    return jsonify(history), 200
+
 @app.route('/train-action', methods=['GET', 'POST'])
 def train_action():
     if request.method == 'POST':
@@ -469,11 +368,10 @@ def train_action():
                                                              min_samples_leaf)
 
         return redirect('/training-history')
-
     return render_template('train.html')
 
-@app.route('/get_model_features', methods=['GET'])
-def get_model_features():
-    features = load_features_from_json()
-    return jsonify(features)
+
+
+
+
 
