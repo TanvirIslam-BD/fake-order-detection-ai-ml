@@ -30,8 +30,7 @@ CATEGORICAL_FEATURES: List[str] = [
     "Customer Name",
     "Currency",
     "Country",
-    "Booking type",
-    "Payment"
+    "Booking type"
 ]
 
 

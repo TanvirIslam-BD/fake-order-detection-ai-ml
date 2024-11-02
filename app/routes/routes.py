@@ -8,7 +8,6 @@ from app.constants import TRAIN_HISTORY_PATH
 from app.trainer.trainer import train_model
 from app.utils.utils import load_features_from_json
 
-# Create the blueprint
 main = Blueprint('main', __name__)
 
 @main.route("/", methods=['GET'])
@@ -48,15 +47,12 @@ def train_action():
         file_path = 'uploads/' + file.filename
         file.save(file_path)
 
-        learning_rate = float(request.form['learning_rate'])
-        max_iter = int(request.form['max_iter'])
-        max_leaf_nodes = int(request.form['max_leaf_nodes'])
-        min_samples_leaf = int(request.form['min_samples_leaf'])
-        label_column = request.form['labelColumn'].strip()
+        results = train_model(request, file_path)
 
-        model, accuracy, precision, recall, f1, confusion, report, roc_img, feature_importance_data = train_model(label_column, file_path, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf)
+        # # Unpack the first few expected values, collect the rest
+        # model, accuracy, precision, recall, f1, confusion, report, roc_img, *extra_values = results
 
-        return redirect('/training-history')
+        redirect('/training-history')
 
     return render_template('index.html')
 
