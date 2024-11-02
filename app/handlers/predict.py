@@ -22,7 +22,7 @@ def extract_datetime_data_json(data):
 
 def predict_handler(request: request, path: str = os.getenv("MODEL_PATH", "data/pipeline.pkl")):
     model: Pipeline = joblib.load(path)
-    statuses = {0: "Not Genuine", 1: "Genuine"}
+    statuses = {0: "Order not genuine", 1: "Genuine order"}
     request_json = request.get_json()
     request_json = extract_datetime_data_json(request_json)
     df = pd.DataFrame.from_records([request_json])
