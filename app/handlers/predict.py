@@ -1,7 +1,5 @@
 import os
-from typing import Any, Callable
 
-import flask
 import joblib
 import pandas as pd
 from flask import request, jsonify
@@ -28,5 +26,7 @@ def predict_handler(request: request, path: str = os.getenv("MODEL_PATH", "data/
     df = pd.DataFrame.from_records([request_json])
     yh = model.predict(df)
     return jsonify(dict(prediction=statuses[int(yh[0])]))
+
+
 
 

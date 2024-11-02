@@ -3,13 +3,11 @@ import io
 import os
 import pickle
 
-from flask import Response, render_template, url_for, flash, redirect
-from flask_cors import CORS
+from flask import  render_template, redirect
 from matplotlib import pyplot as plt
-from sklearn.ensemble import HistGradientBoostingClassifier, RandomForestClassifier
+from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.inspection import permutation_importance
 import json
-import time
 from datetime import datetime
 from typing import List
 import joblib
@@ -34,15 +32,15 @@ from sklearn.metrics import (
     roc_auc_score
 )
 
+from .errors import errors
 from .handlers.predict import predict_handler
-from .model import train_model
 
 
 app = Flask(__name__)
 
 # cors = CORS(app)
 # app.config['CORS_HEADERS'] = 'Content-Type'
-# app.register_blueprint(errors)
+app.register_blueprint(errors)
 # Constants
 
 np.random.seed(42)

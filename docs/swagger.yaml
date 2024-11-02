@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Minimal Flask API Example
+  title: Original Order Check API
   description: This file is for demonstration purposes only, you should fill in your own details.
   version: 0.0.0
 servers:
