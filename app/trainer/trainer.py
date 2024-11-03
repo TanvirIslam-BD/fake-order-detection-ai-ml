@@ -7,62 +7,77 @@ from sklearn.inspection import permutation_importance
 from sklearn.metrics import accuracy_score, roc_auc_score, precision_score, recall_score, f1_score, confusion_matrix, \
     classification_report, roc_curve, auc
 from sklearn.model_selection import train_test_split
-
 from app.constants import CATEGORICAL_FEATURES, NUMERIC_FEATURES, DATE_FEATURES, TIMESTAMP_FMT
 from app.model.model import create_pipeline
 from app.utils.utils import extract_datetime_features, load_model, save_model, save_training_history, \
     save_features_to_json, save_last_trained_features
 from datetime import datetime
+from typing import Tuple, List, Dict
 
 
 def train_model(request, file_path):
 
-    # Extract parameters from the request
-    learning_rate, max_iter, max_leaf_nodes, min_samples_leaf, label_column = extract_parameters(request)
+    (learning_rate, max_iter, max_leaf_nodes,
+     min_samples_leaf, label_column) = extract_parameters(request)
 
-    # Load and prepare data
-    data, X, y, numeric_features, categorical_features = load_and_prepare_data(file_path, label_column, request)
+    (data, feature_matrix_x, target_vector_y,
+     numeric_features, categorical_features) = load_and_prepare_data(file_path, label_column, request)
 
-    # Train the model and evaluate
-    model, metrics, y_pred, y_test, X_test = train_and_evaluate_model(X, y, learning_rate, max_iter, max_leaf_nodes,
+    (model, target_vector_y_test, feature_matrix_x_test) = initiate_model_training(feature_matrix_x, target_vector_y, learning_rate, max_iter, max_leaf_nodes,
                                                               min_samples_leaf, categorical_features, numeric_features)
 
-    # Generate metrics
-    performance_metrics = calculate_metrics(X_test, y_test, y_pred, model)
+    performance_metrics = calculate_model_performance(feature_matrix_x_test, target_vector_y_test, model)
 
-    # Save training history and features
-    save_training_data(metrics, performance_metrics, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf)
+    save_training_data(performance_metrics, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf)
 
     return model, *performance_metrics.values()
 
 def extract_parameters(request):
-    learning_rate = float(request.form['learning_rate'])
-    max_iter = int(request.form['max_iter'])
-    max_leaf_nodes = int(request.form['max_leaf_nodes'])
-    min_samples_leaf = int(request.form['min_samples_leaf'])
-    label_column = request.form['labelColumn'].strip()
+    try:
+        learning_rate = float(request.form['learning_rate'])
+        max_iter = int(request.form['max_iter'])
+        max_leaf_nodes = int(request.form['max_leaf_nodes'])
+        min_samples_leaf = int(request.form['min_samples_leaf'])
+        label_column = request.form['labelColumn'].strip()
+    except (TypeError, ValueError) as e:
+        raise ValueError(f"Invalid parameter in request: {e}")
+
     return learning_rate, max_iter, max_leaf_nodes, min_samples_leaf, label_column
 
 
-def load_and_prepare_data(file_path, label_column, request):
-    data = pd.read_csv(file_path)
-    # Clean price columns
+def load_and_prepare_data( file_path: str,  label_column: str,  request: Dict) -> Tuple[pd.DataFrame, pd.DataFrame, pd.Series, List[str], List[str]]:
+
+    try:
+        data = pd.read_csv(file_path)
+    except FileNotFoundError as e:
+        raise FileNotFoundError(f"File not found: {file_path}") from e
+    except pd.errors.EmptyDataError:
+        raise ValueError("The file is empty or invalid format.")
+
     clean_price_data(data)
 
-    # Extract features from the request
     categorical_features = request.form.getlist('categoricalFields')
     date_features = request.form.getlist('dateFields')
     numeric_features = request.form.getlist('numericFields')
-    numeric_features = numeric_features + DATE_FEATURES
+
+    missing_columns = [col for col in categorical_features + numeric_features + [label_column] if
+                       col not in data.columns]
+    if missing_columns:
+        raise ValueError(f"Missing columns in data: {missing_columns}")
+
+    try:
+        numeric_features = numeric_features + DATE_FEATURES
+    except NameError:
+        raise ValueError("DATE_FEATURES is not defined in the current scope.")
 
     save_last_trained_features(categorical_features, numeric_features, date_features)
 
-    # Extract datetime features
     data_frame = extract_datetime_features(data)
-    X = data_frame[categorical_features + numeric_features]
-    y = data[label_column]
 
-    return data, X, y, numeric_features, categorical_features
+    feature_matrix_x = data_frame[categorical_features + numeric_features]
+    target_vector_y = data[label_column]
+
+    return data, feature_matrix_x, target_vector_y, numeric_features, categorical_features
 
 
 def clean_price_data(data):
@@ -74,10 +89,10 @@ def clean_price_data(data):
     )
 
 
-def train_and_evaluate_model(X, y, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf, categorical_features, numeric_features):
+def initiate_model_training(feature_matrix_x, target_vector_y, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf, categorical_features, numeric_features):
 
-    # Split data into training and testing sets
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    (feature_matrix_x_train, feature_matrix_x_test,
+     target_vector_y_train, target_vector_y_test) = train_test_split(feature_matrix_x, target_vector_y, test_size=0.2, random_state=42)
 
     model = load_model()  # Load existing model if present
     # model = model or create_pipeline(
@@ -99,45 +114,35 @@ def train_and_evaluate_model(X, y, learning_rate, max_iter, max_leaf_nodes, min_
     )
 
     try:
-        model.fit(X_train, y_train)
+        model.fit(feature_matrix_x_train, target_vector_y_train)
     except ValueError as e:
         print("Error during model fitting:", e)
-        print("X_train columns:", X_train.columns.tolist())
+        print("X_train columns:", feature_matrix_x_train.columns.tolist())
         print("Expected categorical features:", categorical_features)
         print("Expected numeric features:", numeric_features)
-        raise  # Re-raise the exception after logging
+        raise
 
-    # Make predictions on the test set
-    y_pred = model.predict(X_test)
+    save_model(model)
 
-    metrics = {
-        "train_accuracy": accuracy_score(y_train, model.predict(X_train)) * 100,
-        "test_accuracy": accuracy_score(y_test, y_pred) * 100,
-        "roc_auc": roc_auc_score(y_test, model.predict_proba(X_test)[:, -1]),
-        "timestamp": datetime.now().strftime(TIMESTAMP_FMT)
-    }
-
-    save_model(model, metrics)  # Save the updated model and metrics
-
-    return model, metrics, y_pred, y_test, X_test
+    return model, target_vector_y_test, feature_matrix_x_test
 
 
-def calculate_metrics(X_test, y_test, y_pred, model):
+def calculate_model_performance(feature_matrix_x_test, y_test, model):
 
-    accuracy = accuracy_score(y_test, y_pred)
-    precision = precision_score(y_test, y_pred, average='binary')
-    recall = recall_score(y_test, y_pred, average='binary')
-    f1 = f1_score(y_test, y_pred, average='binary')
-    confusion = confusion_matrix(y_test, y_pred).tolist()
-    report = classification_report(y_test, y_pred, output_dict=True)
+    target_vector_y_prediction = model.predict(feature_matrix_x_test)
 
-    # Calculate ROC curve
-    y_pred_proba = model.predict_proba(X_test)[:, 1]
+    accuracy = accuracy_score(y_test, target_vector_y_prediction)
+    precision = precision_score(y_test, target_vector_y_prediction, average='binary')
+    recall = recall_score(y_test, target_vector_y_prediction, average='binary')
+    f1 = f1_score(y_test, target_vector_y_prediction, average='binary')
+    confusion = confusion_matrix(y_test, target_vector_y_prediction).tolist()
+    report = classification_report(y_test, target_vector_y_prediction, output_dict=True)
+
+    y_pred_proba = model.predict_proba(feature_matrix_x_test)[:, 1]
     fpr, tpr, _ = roc_curve(y_test, y_pred_proba)
     roc_auc = auc(fpr, tpr)
 
-    # Calculate permutation importance
-    feature_importance_data = calculate_permutation_importance(model, X_test, y_test)
+    feature_importance_data = calculate_permutation_importance(model, feature_matrix_x_test, y_test)
 
     return {
         "accuracy": accuracy,
@@ -177,7 +182,7 @@ def calculate_permutation_importance(model, X_test, y_test):
     else:
         return [(feature, 0) for feature in X_test.columns]
 
-def save_training_data(metrics, performance_metrics, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf):
+def save_training_data(performance_metrics, learning_rate, max_iter, max_leaf_nodes, min_samples_leaf):
     entry = {
         "timestamp": datetime.now().strftime(TIMESTAMP_FMT),
         **performance_metrics,
@@ -187,9 +192,7 @@ def save_training_data(metrics, performance_metrics, learning_rate, max_iter, ma
         "min_samples_leaf": min_samples_leaf,
     }
 
-    # Save this training session's details to history
     save_training_history(entry)
 
-    # Save features to JSON file
     last_trained_features = CATEGORICAL_FEATURES + NUMERIC_FEATURES
     save_features_to_json(last_trained_features)

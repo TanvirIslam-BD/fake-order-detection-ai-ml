@@ -47,11 +47,7 @@ def train_action():
         file_path = 'uploads/' + file.filename
         file.save(file_path)
 
-        results = train_model(request, file_path)
-
-        # # Unpack the first few expected values, collect the rest
-        # model, accuracy, precision, recall, f1, confusion, report, roc_img, *extra_values = results
-
+        train_model(request, file_path)
         render_template("history.html")
 
     return render_template('history.html')

@@ -1,12 +1,9 @@
 import os
-
 import joblib
 import pandas as pd
 from flask import request, jsonify
 from sklearn.pipeline import Pipeline
-
 from app.constants import MODEL_PATH
-
 
 def extract_datetime_data_json(data):
     if "Date & Time" not in data:
@@ -25,9 +22,9 @@ def predict_handler(request: request, path: str = os.getenv("MODEL_PATH", MODEL_
     statuses = {0: "Order not genuine", 1: "Genuine order"}
     request_json = request.get_json()
     request_json = extract_datetime_data_json(request_json)
-    df = pd.DataFrame.from_records([request_json])
-    yh = model.predict(df)
-    return jsonify(dict(prediction=statuses[int(yh[0])]))
+    data_frame = pd.DataFrame.from_records([request_json])
+    target_vector_y_predict = model.predict(data_frame)
+    return jsonify(dict(prediction=statuses[int(target_vector_y_predict[0])]))
 
 
 

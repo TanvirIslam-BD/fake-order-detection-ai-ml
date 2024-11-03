@@ -10,3 +10,4 @@ Flask-Login
 Flask-SocketIO
 Flask-WTF
 Flask-SQLAlchemy
+matplotlib

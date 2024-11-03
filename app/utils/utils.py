@@ -59,10 +59,8 @@ def load_model():
     return None
 
 # Save the model and metrics
-def save_model(model, metrics):
+def save_model(model):
     joblib.dump(model, MODEL_PATH)
-    with open(METRICS_PATH, "w") as f:
-        json.dump(metrics, f)
 
 def save_last_trained_features(categorical_features, numeric_features, date_features):
     last_trained_features = {
