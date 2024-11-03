@@ -52,9 +52,9 @@ def train_action():
         # # Unpack the first few expected values, collect the rest
         # model, accuracy, precision, recall, f1, confusion, report, roc_img, *extra_values = results
 
-        redirect('/training-history')
+        render_template("history.html")
 
-    return render_template('index.html')
+    return render_template('history.html')
 
 
 @main.route("/data-set-info", methods=["POST"])

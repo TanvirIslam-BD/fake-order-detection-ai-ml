@@ -80,7 +80,16 @@ def train_and_evaluate_model(X, y, learning_rate, max_iter, max_leaf_nodes, min_
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
     model = load_model()  # Load existing model if present
-    model = model or create_pipeline(
+    # model = model or create_pipeline(
+    #     categorical_features=categorical_features,
+    #     numeric_features=numeric_features,
+    #     learning_rate=learning_rate,
+    #     max_iter=max_iter,
+    #     max_leaf_nodes=max_leaf_nodes,
+    #     min_samples_leaf=min_samples_leaf
+    # )
+
+    model = create_pipeline(
         categorical_features=categorical_features,
         numeric_features=numeric_features,
         learning_rate=learning_rate,

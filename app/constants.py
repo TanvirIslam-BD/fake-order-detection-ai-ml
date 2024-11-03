@@ -41,3 +41,10 @@ DATE_FEATURES: List[str] = [
     "hour",
     "minute"
 ]
+
+HYPERPARAMETERS  = {
+    "learning_rate": 0.05,        # Moderately low learning rate for gradual learning
+    "max_iter": 250,              # Sufficient iterations for convergence at this learning rate
+    "max_leaf_nodes": 20,         # Balanced tree complexity
+    "min_samples_leaf": 15        # Ensures each leaf has enough samples for generalization
+}
