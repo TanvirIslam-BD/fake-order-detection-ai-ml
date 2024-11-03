@@ -59,21 +59,21 @@ def get_data_set_info():
     if not file:
         return jsonify({"error": "No file uploaded"}), 400
 
-    df = pd.read_csv(file)
+    data_frame = pd.read_csv(file)
 
     buffer = io.StringIO()
-    df.info(buf=buffer)
+    data_frame.info(buf=buffer)
     info_str = buffer.getvalue()
 
-    column_names = df.columns.tolist()
+    column_names = data_frame.columns.tolist()
 
     summary = {
-        "head": df.head().to_html(),
+        "head": data_frame.head().to_html(),
         "info": info_str,
         "column_names": column_names,
-        "describe": df.describe(include="all").to_html(),
-        "missing_values": df.isnull().sum().to_dict(),
-        "unique_values": df.nunique().to_dict()
+        "describe": data_frame.describe(include="all").to_html(),
+        "missing_values": data_frame.isnull().sum().to_dict(),
+        "unique_values": data_frame.nunique().to_dict(),
     }
 
     return jsonify(summary), 200
