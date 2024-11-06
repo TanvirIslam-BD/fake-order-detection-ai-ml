@@ -11,3 +11,4 @@ Flask-SocketIO
 Flask-WTF
 Flask-SQLAlchemy
 matplotlib
+numpy
